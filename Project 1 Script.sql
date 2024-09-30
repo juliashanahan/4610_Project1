@@ -509,8 +509,8 @@ SELECT
     Rent_Payments.Status AS Payment_Status,  
     Leases.Rent_Amount AS Rent_Amount  
 FROM   
-    `cs_bag15552`.`Student` AS Student  
-    JOIN `cs_bag15552`.`Leases` AS Leases ON Student.Leases_idLeases = Leases.idLeases  
-    JOIN `cs_bag15552`.`Rent_Payments` AS Rent_Payments ON Leases.idLeases = Rent_Payments.Leases_idLeases  
+    Student AS Student  
+    JOIN Leases AS Leases ON Student.Leases_idLeases = Leases.idLeases  
+    JOIN Rent_Payments AS Rent_Payments ON Leases.idLeases = Rent_Payments.Leases_idLeases  
 WHERE   
     Rent_Payments.Status = 'Paid';  
