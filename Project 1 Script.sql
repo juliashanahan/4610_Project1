@@ -456,19 +456,19 @@ INSERT INTO `cs_bag15552`.`Apartment_has_Maintenance Requests` (`Apartment_idApa
 
 # Query to Find Pending Maintenance Requests
 SELECT *  
-FROM `Maintenance_Requests`  
-WHERE `Status` = 'Pending';  
+FROM Maintenance_Requests  
+WHERE Status = 'Pending';  
 
 # Query to find Overdue Rent Payments
-SELECT s.*  
-FROM `Student` s  
-JOIN `Rent_Payments` rp ON s.`Leases_idLeases` = rp.`Leases_idLeases`  
-WHERE rp.`Status` = 'Late';  
+SELECT *  
+FROM Student 
+JOIN Rent_Payments ON Student.Leases_idLeases = Rent_Payments.Leases_idLeases
+WHERE Status = 'Late';  
 
 # Query to Total Rent per Student for the year
-SELECT s.`First_Name`, s.`Last_Name`, (l.`Rent_Amount` * 12) AS `Total_Rent`  
-FROM `Student` s  
-JOIN `Leases` l ON s.`Leases_idLeases` = l.`idLeases`;  
+SELECT First_Name, Last_Name, (Rent_Amount * 12) AS `Total_Rent`  
+FROM Student  
+JOIN Leases ON Leases_idLeases = idLeases;  
 
 # Query to Find Students with Active Students
 select Student.First_Name, Student.Last_Name, Leases.Start_Date
