@@ -482,3 +482,9 @@ Apartment.Rent, Buildings.Building_Name
 from Apartment
 join Buildings on Apartment.Buildings_idBuildings = Buildings.idBuildings
 where Apartment.Availability = 'Available';
+
+# Query to List Furniture Inventory per Apartment:
+select Room_Number, idApartment, Furniture_Type, Quantity, Furniture_Inventory.Condition
+from Furniture_Inventory
+join Apartment on Apartment.idApartment = Furniture_Inventory.Apartment_idApartment
+order by idApartment, Furniture_Type;
