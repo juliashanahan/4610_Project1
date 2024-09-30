@@ -278,18 +278,6 @@ select * from Apartment,
     
 ### Data
 
-INSERT INTO Apartment (idApartment, Room_Number, Number_Of_Bedrooms, Number_Of_Bathrooms, Rent, Availability, Leases_idLeases, Buildings_idBuildings) VALUES
-(1, 101, 2, 1, 1200, 'Available', 1, 1),
-(2, 202, 3, 2, 1500, 'Occupied', 2, 2),
-(3, 303, 1, 1, 1000, 'Occupied', 3, 3),
-(4, 404, 2, 2, 2000, 'Available', 4, 4),
-(5, 505, 3, 2, 1800, 'Occupied', 5, 5),
-(6, 606, 2, 1, 1100, 'Available', 6, 6),
-(7, 707, 1, 1, 1300, 'Occupied', 7, 7),
-(8, 808, 2, 2, 1700, 'Occupied', 8, 8),
-(9, 909, 3, 2, 1400, 'Available', 9, 9),
-(10, 1001, 1, 1, 1600, 'Occupied', 10, 10);
-
 INSERT INTO Leases (idLeases, Start_Date, End_Date, Rent_Amount, Security_Deposit, Status) VALUES
 (1, '2023-01-01', '2023-12-31', 1200, 1000, 'Active'),
 (2, '2023-02-01', '2023-12-31', 1500, 1200, 'Active'),
@@ -301,6 +289,30 @@ INSERT INTO Leases (idLeases, Start_Date, End_Date, Rent_Amount, Security_Deposi
 (8, '2023-09-01', '2024-08-31', 1700, 1100, 'Active'),
 (9, '2023-05-01', '2024-04-30', 1400, 1050, 'Active'),
 (10, '2023-10-01', '2024-09-30', 1600, 1250, 'Active');
+
+INSERT INTO Buildings (idBuildings, Building_Name, Address, Total_Apartments) VALUES
+(1, 'Oceanview', '123 Beach Road', 50),
+(2, 'Sunset Towers', '456 Sunset Blvd', 40),
+(3, 'Pine Apartments', '789 Pine St', 30),
+(4, 'Maple Residences', '101 Maple Dr', 60),
+(5, 'Seaside Villa', '102 Seaside Lane', 45),
+(6, 'Hilltop Heights', '103 Hilltop Ave', 35),
+(7, 'Cityscape Condos', '104 Cityscape Way', 25),
+(8, 'Harbor Apartments', '105 Harbor Rd', 55),
+(9, 'Lakeside Homes', '106 Lakeside Dr', 65),
+(10, 'Riverside Flats', '107 Riverside Ave', 70);
+
+INSERT INTO Apartment (idApartment, Room_Number, Number_Of_Bedrooms, Number_Of_Bathrooms, Rent, Availability, Leases_idLeases, Buildings_idBuildings) VALUES
+(1, 101, 2, 1, 1200, 'Available', 1, 1),
+(2, 202, 3, 2, 1500, 'Occupied', 2, 2),
+(3, 303, 1, 1, 1000, 'Occupied', 3, 3),
+(4, 404, 2, 2, 2000, 'Available', 4, 4),
+(5, 505, 3, 2, 1800, 'Occupied', 5, 5),
+(6, 606, 2, 1, 1100, 'Available', 6, 6),
+(7, 707, 1, 1, 1300, 'Occupied', 7, 7),
+(8, 808, 2, 2, 1700, 'Occupied', 8, 8),
+(9, 909, 3, 2, 1400, 'Available', 9, 9),
+(10, 1001, 1, 1, 1600, 'Occupied', 10, 10);
 
 INSERT INTO `cs_pes30522`.`Contracts` (`idContracts`, `Signed_Date`, `Expiration_Date`, `Apartment_idApartment`)
 VALUES
@@ -314,18 +326,6 @@ VALUES
 (8, '2023-08-30', '2024-08-30', 8),
 (9, '2023-09-10', '2024-09-10', 9),
 (10, '2023-10-01', '2024-10-01', 10);
-
-INSERT INTO Buildings (idBuildings, Building_Name, Address, Total_Apartments) VALUES
-(1, 'Oceanview', '123 Beach Road', 50),
-(2, 'Sunset Towers', '456 Sunset Blvd', 40),
-(3, 'Pine Apartments', '789 Pine St', 30),
-(4, 'Maple Residences', '101 Maple Dr', 60),
-(5, 'Seaside Villa', '102 Seaside Lane', 45),
-(6, 'Hilltop Heights', '103 Hilltop Ave', 35),
-(7, 'Cityscape Condos', '104 Cityscape Way', 25),
-(8, 'Harbor Apartments', '105 Harbor Rd', 55),
-(9, 'Lakeside Homes', '106 Lakeside Dr', 65),
-(10, 'Riverside Flats', '107 Riverside Ave', 70);
 
 INSERT INTO Roommates (idRoommates, Shared_Lease, Apartment_idApartment) VALUES
 (1, 'Yes', 1),
@@ -375,19 +375,6 @@ INSERT INTO Utilities (idUtilities, Cost_Per_Month, Apartment_idApartment) VALUE
 (9, 140, 9),
 (10, 200, 10);
 
-INSERT INTO `cs_pes30522`.`Apartment_has_Maintenance_Requests` (`Apartment_idApartment`, `Maintenance_Requests_idMaintenance_Requests`)
-VALUES
-(1, 1),
-(2, 2),
-(3, 3),
-(4, 4),
-(5, 5),
-(6, 6),
-(7, 7),
-(8, 8),
-(9, 9),
-(10, 10);
-
 INSERT INTO `Maintenance_Requests` (idMaintenance_Requests, Request_Date, Description, Status, Completion_Date, Student_idStudent) VALUES
 (1, '2023-01-10', 'Fix the sink', 'Completed', '2023-01-15', 1),
 (2, '2023-02-12', 'Replace the door lock', 'In Progress', NULL, 2),
@@ -426,3 +413,15 @@ VALUES
 (9, 'VWX987', 9),
 (10, 'YZA123', 10);
 
+INSERT INTO `cs_pes30522`.`Apartment_has_Maintenance_Requests` (`Apartment_idApartment`, `Maintenance_Requests_idMaintenance_Requests`)
+VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10);
