@@ -272,4 +272,157 @@ select * from Apartment,
     Utilities,
     Apartment_has_Maintenance_Requests,
     Maintenance_Requests,
+    Maintenance_Staff,
     Parking_Permits;
+    
+    
+### Data
+
+INSERT INTO Apartment (idApartment, Room_Number, Number_Of_Bedrooms, Number_Of_Bathrooms, Rent, Availability, Leases_idLeases, Buildings_idBuildings) VALUES
+(1, 101, 2, 1, 1200, 'Available', 1, 1),
+(2, 202, 3, 2, 1500, 'Occupied', 2, 2),
+(3, 303, 1, 1, 1000, 'Occupied', 3, 3),
+(4, 404, 2, 2, 2000, 'Available', 4, 4),
+(5, 505, 3, 2, 1800, 'Occupied', 5, 5),
+(6, 606, 2, 1, 1100, 'Available', 6, 6),
+(7, 707, 1, 1, 1300, 'Occupied', 7, 7),
+(8, 808, 2, 2, 1700, 'Occupied', 8, 8),
+(9, 909, 3, 2, 1400, 'Available', 9, 9),
+(10, 1001, 1, 1, 1600, 'Occupied', 10, 10);
+
+INSERT INTO Leases (idLeases, Start_Date, End_Date, Rent_Amount, Security_Deposit, Status) VALUES
+(1, '2023-01-01', '2023-12-31', 1200, 1000, 'Active'),
+(2, '2023-02-01', '2023-12-31', 1500, 1200, 'Active'),
+(3, '2023-03-01', '2024-02-28', 1000, 800, 'Active'),
+(4, '2022-06-01', '2023-05-31', 2000, 1500, 'Inactive'),
+(5, '2023-07-01', '2024-06-30', 1800, 1300, 'Active'),
+(6, '2022-11-01', '2023-10-31', 1100, 950, 'Active'),
+(7, '2023-08-01', '2024-07-31', 1300, 1000, 'Active'),
+(8, '2023-09-01', '2024-08-31', 1700, 1100, 'Active'),
+(9, '2023-05-01', '2024-04-30', 1400, 1050, 'Active'),
+(10, '2023-10-01', '2024-09-30', 1600, 1250, 'Active');
+
+INSERT INTO `cs_pes30522`.`Contracts` (`idContracts`, `Signed_Date`, `Expiration_Date`, `Apartment_idApartment`)
+VALUES
+(1, '2023-01-01', '2024-01-01', 1),
+(2, '2023-02-15', '2024-02-15', 2),
+(3, '2023-03-10', '2024-03-10', 3),
+(4, '2023-04-05', '2024-04-05', 4),
+(5, '2023-05-20', '2024-05-20', 5),
+(6, '2023-06-15', '2024-06-15', 6),
+(7, '2023-07-25', '2024-07-25', 7),
+(8, '2023-08-30', '2024-08-30', 8),
+(9, '2023-09-10', '2024-09-10', 9),
+(10, '2023-10-01', '2024-10-01', 10);
+
+INSERT INTO Buildings (idBuildings, Building_Name, Address, Total_Apartments) VALUES
+(1, 'Oceanview', '123 Beach Road', 50),
+(2, 'Sunset Towers', '456 Sunset Blvd', 40),
+(3, 'Pine Apartments', '789 Pine St', 30),
+(4, 'Maple Residences', '101 Maple Dr', 60),
+(5, 'Seaside Villa', '102 Seaside Lane', 45),
+(6, 'Hilltop Heights', '103 Hilltop Ave', 35),
+(7, 'Cityscape Condos', '104 Cityscape Way', 25),
+(8, 'Harbor Apartments', '105 Harbor Rd', 55),
+(9, 'Lakeside Homes', '106 Lakeside Dr', 65),
+(10, 'Riverside Flats', '107 Riverside Ave', 70);
+
+INSERT INTO Roommates (idRoommates, Shared_Lease, Apartment_idApartment) VALUES
+(1, 'Yes', 1),
+(2, 'Yes', 2),
+(3, 'No', 3),
+(4, 'Yes', 4),
+(5, 'No', 5),
+(6, 'Yes', 6),
+(7, 'Yes', 7),
+(8, 'No', 8),
+(9, 'Yes', 9),
+(10, 'Yes', 10);
+
+INSERT INTO Student (idStudent, First_Name, Last_Name, Email, Phone, Gender, Leases_idLeases) VALUES
+(1, 'Alice', 'Johnson', 'alice.johnson@example.com', '123-456-7890', 'Female', 1),
+(2, 'Bob', 'Smith', 'bob.smith@example.com', '123-456-7891', 'Male', 2),
+(3, 'Charlie', 'Davis', 'charlie.davis@example.com', '123-456-7892', 'Male', 3),
+(4, 'Diana', 'Morris', 'diana.morris@example.com', '123-456-7893', 'Female', 4),
+(5, 'Eve', 'Taylor', 'eve.taylor@example.com', '123-456-7894', 'Female', 5),
+(6, 'Frank', 'Miller', 'frank.miller@example.com', '123-456-7895', 'Male', 6),
+(7, 'Grace', 'Wilson', 'grace.wilson@example.com', '123-456-7896', 'Female', 7),
+(8, 'Henry', 'Anderson', 'henry.anderson@example.com', '123-456-7897', 'Male', 8),
+(9, 'Ivy', 'Martinez', 'ivy.martinez@example.com', '123-456-7898', 'Female', 9),
+(10, 'Jack', 'Parker', 'jack.parker@example.com', '123-456-7899', 'Male', 10);
+
+INSERT INTO `Rent_Payments` (idRent_Payments, Payment_Date, Amount_Paid, Status, Leases_idLeases) VALUES
+(1, '2023-01-05', 1200, 'Paid', 1),
+(2, '2023-02-05', 1500, 'Paid', 2),
+(3, '2023-03-05', 1000, 'Paid', 3),
+(4, '2023-04-05', 2000, 'Paid', 4),
+(5, '2023-05-05', 1800, 'Paid', 5),
+(6, '2023-06-05', 1100, 'Paid', 6),
+(7, '2023-07-05', 1300, 'Paid', 7),
+(8, '2023-08-05', 1700, 'Paid', 8),
+(9, '2023-09-05', 1400, 'Paid', 9),
+(10, '2023-10-05', 1600, 'Paid', 10);
+
+INSERT INTO Utilities (idUtilities, Cost_Per_Month, Apartment_idApartment) VALUES
+(1, 150, 1),
+(2, 200, 2),
+(3, 100, 3),
+(4, 250, 4),
+(5, 180, 5),
+(6, 130, 6),
+(7, 160, 7),
+(8, 220, 8),
+(9, 140, 9),
+(10, 200, 10);
+
+INSERT INTO `cs_pes30522`.`Apartment_has_Maintenance_Requests` (`Apartment_idApartment`, `Maintenance_Requests_idMaintenance_Requests`)
+VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10);
+
+INSERT INTO `Maintenance_Requests` (idMaintenance_Requests, Request_Date, Description, Status, Completion_Date, Student_idStudent) VALUES
+(1, '2023-01-10', 'Fix the sink', 'Completed', '2023-01-15', 1),
+(2, '2023-02-12', 'Replace the door lock', 'In Progress', NULL, 2),
+(3, '2023-03-20', 'Paint the walls', 'Completed', '2023-03-25', 3),
+(4, '2023-04-15', 'Repair the window', 'Pending', NULL, 4),
+(5, '2023-05-18', 'Fix the heater', 'Completed', '2023-05-22', 5),
+(6, '2023-06-22', 'Plumbing issue', 'In Progress', NULL, 6),
+(7, '2023-07-28', 'Replace light bulbs', 'Completed', '2023-07-30', 7),
+(8, '2023-08-05', 'Air conditioner repair', 'Pending', NULL, 8),
+(9, '2023-09-10', 'Fix the fridge', 'Completed', '2023-09-15', 9),
+(10, '2023-10-15', 'Floor repair', 'In Progress', NULL, 10);
+
+INSERT INTO `cs_pes30522`.`Maintenance_Staff` (`idMaintenance_Staff`, `Name`, `Role`, `Buildings_idBuildings`)
+VALUES
+(1, 'John Doe', 'Plumber', 1),
+(2, 'Jane Smith', 'Electrician', 2),
+(3, 'Alice Johnson', 'Cleaner', 3),
+(4, 'Bob Brown', 'Carpenter', 4),
+(5, 'Charlie Green', 'Painter', 5),
+(6, 'Eve White', 'Plumber', 6),
+(7, 'Frank Black', 'Electrician', 7),
+(8, 'Grace Yellow', 'Cleaner', 8),
+(9, 'Hank Red', 'Carpenter', 9),
+(10, 'Ivy Blue', 'Painter', 10);
+
+INSERT INTO `cs_pes30522`.`Parking_Permits` (`idParking_Permits`, `License_Plate_Number`, `Apartment_idApartment`)
+VALUES
+(1, 'XYZ123', 1),
+(2, 'ABC456', 2),
+(3, 'DEF789', 3),
+(4, 'GHI321', 4),
+(5, 'JKL654', 5),
+(6, 'MNO987', 6),
+(7, 'PQR321', 7),
+(8, 'STU654', 8),
+(9, 'VWX987', 9),
+(10, 'YZA123', 10);
+
