@@ -499,3 +499,18 @@ select Room_Number, Condition from Apartment join Furniture_Inventory
 on Apartment.idApartment = Furniture_Inventory.idApartment
 group by Apartment.Room_Number
 having Condition = 'Poor';
+
+SELECT   
+    Student.First_Name,  
+    Student.Last_Name,  
+    Student.Email,  
+    Rent_Payments.Payment_Date,  
+    Rent_Payments.Amount_Paid,  
+    Rent_Payments.Status AS Payment_Status,  
+    Leases.Rent_Amount AS Rent_Amount  
+FROM   
+    `cs_bag15552`.`Student` AS Student  
+    JOIN `cs_bag15552`.`Leases` AS Leases ON Student.Leases_idLeases = Leases.idLeases  
+    JOIN `cs_bag15552`.`Rent_Payments` AS Rent_Payments ON Leases.idLeases = Rent_Payments.Leases_idLeases  
+WHERE   
+    Rent_Payments.Status = 'Paid';  
