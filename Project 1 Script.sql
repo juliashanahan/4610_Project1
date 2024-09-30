@@ -466,3 +466,16 @@ WHERE rp.`Status` = 'Late';
 SELECT s.`First_Name`, s.`Last_Name`, (l.`Rent_Amount` * 12) AS `Total_Rent`  
 FROM `Student` s  
 JOIN `Leases` l ON s.`Leases_idLeases` = l.`idLeases`;  
+
+# Query to Find Students with Active Students
+select Student.First_Name, Student.Last_Name, Leases.Start_Date
+from Student
+join Leases  on Student.Leases_idLeases = Leases.idLeases
+where Leases.Status = 'Active';
+
+# Query to List Apartments Available for Rent:
+select Apartment.Room_Number, Apartment.Number_Of_Bedrooms, Apartment.Number_Of_Bathrooms,
+Apartment.Rent, Buildings.Building_Name
+from Apartment
+join Buildings on Apartment.Buildings_idBuildings = Buildings.idBuildings
+where Apartment.Availability = 'Available';
