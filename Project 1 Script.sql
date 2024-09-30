@@ -488,3 +488,14 @@ select Room_Number, idApartment, Furniture_Type, Quantity, Furniture_Inventory.C
 from Furniture_Inventory
 join Apartment on Apartment.idApartment = Furniture_Inventory.Apartment_idApartment
 order by idApartment, Furniture_Type;
+
+SELECT Apartment.Room_Number, Apartment.Number_Of_Bedrooms, AVG(Cost_Per_Month) AS 'avg Utilities'
+FROM Apartment
+JOIN Utilities ON Apartment.idApartment = Utilities.idApartment
+GROUP BY Apartment.Room_Number, Apartment.Number_Of_Bedrooms
+HAVING AVG(Cost_Per_Month)>100;
+
+select Room_Number, Condition from Apartment join Furniture_Inventory
+on Apartment.idApartment = Furniture_Inventory.idApartment
+group by Apartment.Room_Number
+having Condition = 'Poor';
