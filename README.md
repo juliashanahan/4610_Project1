@@ -4,7 +4,7 @@
 Ctrl+Alt+Elite
 
 ## Team Members:
-1. Julia Shanahan @juliashanahan
+1. Julia Shanahan [@juliashanahan](https://github.com/juliashanahan)
 2. Ben Goodall
 3. Kira Mennella
 4. Peyton Strickland
