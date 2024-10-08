@@ -10,7 +10,7 @@ Ctrl+Alt+Elite
 4. Peyton Strickland [@pes30522](https://github.com/pes30522)
 5. Yulianna Pazymino [@yuliapazymino](https://github.com/yuliapazymino)
 
-## Problem Description
+## Scenario Description
 As universities grow and student populations increase, the management of on-campus and off-campus student housing becomes more complex. Our project focuses on developing a Student Housing Management System that streamlines the operations of student accommodations.
 
 This system is designed to help housing administrators, students, and building managers efficiently manage various aspects of student housing, including rent payments, lease agreements, maintenance requests, and utilities. The database will provide a centralized platform to track apartment availability, assign roommates, process rent payments, and handle maintenance requests. It will also support additional functionalities such as parking permit management, furniture inventory, and staff assignments.
