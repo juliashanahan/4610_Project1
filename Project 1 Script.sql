@@ -617,4 +617,20 @@ FROM
     JOIN Leases AS Leases ON Student.Leases_idLeases = Leases.idLeases  
     JOIN Rent_Payments AS Rent_Payments ON Leases.idLeases = Rent_Payments.Leases_idLeases  
 WHERE   
-    Rent_Payments.Status = 'Paid';  
+    Rent_Payments.Status = 'Paid'; 
+
+# Query that answers: "Which students have made rent payments?"
+select 
+    Student.First_Name,
+    Student.Last_Name,
+    Student.Email,
+    Rent_Payments.Payment_Date,
+    Rent_Payments.Amount_Paid,
+    Rent_Payments.Status as Payment_Status,
+    Leases.Rent_Amount as Rent_Amount
+from 
+    Student
+	join Leases on Student.Leases_idLeases = Leases.idLeases
+  join Rent_Payments on Leases.idLeases = Rent_Payments.Leases_idLeases
+where 
+    Rent_Payments.Status = 'Paid';
