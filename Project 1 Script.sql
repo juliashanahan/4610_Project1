@@ -634,3 +634,15 @@ from
   join Rent_Payments on Leases.idLeases = Rent_Payments.Leases_idLeases
 where 
     Rent_Payments.Status = 'Paid';
+
+
+select Building.BuildingName,
+avg(Apartment.Rent) as 'Average_Rent',
+sum(Utilities.Cost_Per_Month) as 'Total_Utilities_Cost',
+count(Students.idStudent) as 'Number_of_Students'
+from Buildings
+Join Apartment on Buildings.idBuildings = Apartment.idBuildings
+Join Leases on Apartment.Leases_idLeases = Leases.idLeases
+Join Student on Leases.idLeases = Student.idLeases
+Join Utilities on Apartment.idApartment = Utilities.idApartment
+group by Building.Building_Name;
