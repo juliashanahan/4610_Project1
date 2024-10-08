@@ -5,10 +5,10 @@ Ctrl+Alt+Elite
 
 ## Team Members:
 1. Julia Shanahan [@juliashanahan](https://github.com/juliashanahan)
-2. Ben Goodall
-3. Kira Mennella
-4. Peyton Strickland
-5. Yulianna Pazymino
+2. Ben Goodall [@bengoodalll](https://github.com/bengoodalll)
+3. Kira Mennella [@kiramennella](https://github.com/kiramennella)
+4. Peyton Strickland [@pes30522](https://github.com/pes30522)
+5. Yulianna Pazymino [@yuliapazymino](https://github.com/yuliapazymino)
 
 ## Problem Description
 As universities grow and student populations increase, the management of on-campus and off-campus student housing becomes more complex. Our project focuses on developing a Student Housing Management System that streamlines the operations of student accommodations.
