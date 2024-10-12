@@ -33,6 +33,9 @@ The apartment entity contains details regarding the size of the apartment, the c
 
 ## Data Dictionary:
 
+![27EA16B1-4175-49C5-87A2-FEAA71CCCEF4](https://github.com/user-attachments/assets/b28eb736-4a08-412d-81dc-6e7c26f6bd20)
+
+
 ## Queries: 
 1. Query 1 lists all of the pending maintenance requests.
 
