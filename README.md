@@ -34,6 +34,8 @@ The apartment entity contains details regarding the size of the apartment, the c
 ## Data Dictionary:
 
 ![27EA16B1-4175-49C5-87A2-FEAA71CCCEF4](https://github.com/user-attachments/assets/b28eb736-4a08-412d-81dc-6e7c26f6bd20)
+![image](https://github.com/user-attachments/assets/29085eb2-9f26-441a-974c-d9b3c2d6fa70)
+
 
 
 ## Queries: 
