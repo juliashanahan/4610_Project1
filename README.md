@@ -23,7 +23,13 @@ Our solution will cater to university housing departments, student landlords, an
 ![Model project 1](https://github.com/user-attachments/assets/14c07fe7-a483-45ea-bc96-11df706f58ea)
 
 
-Our model is based on the structure of a hypothetical housing corporation.
+Our model represents a hypothetical housing corporation for off-campus student living for managing apartments, tenants, leases, maintenance requests, and associated utilities and staff in an apartment complex. 
+
+The Student entity represents the student who has been or is currently a tenant of an apartment, and contains the personal information of the resident. Each student is associated with a lease. This is shown by a one-to-one relationship with the leases entity because a student is associated with only one lease, and each lease is specific to one student. The student entity also has a one-to-many relationship with the maintenance requests entity given that one student can make many maintenance requests, but each maintenance request is submitted by one student.
+
+The leases entity, which contains the general leasing information, also has a relationship with two other entities. There is a one-to-many relationship with rent payments because one lease can have many rent payments, given that there are 12 monthly rent payments in a one-year lease, but each payment comes from one specific lease. Additionally, leases has another one-to-many relationship with apartment. Apartments can have different amounts of bedrooms with different amounts of students in each apartment. Each room is rented individually. Therefore, there can be many leases associated with one apartment, but each lease is specific to one apartment.
+
+The apartment entity contains details regarding the size of the apartment, the cost, and whether it is available or not. Parking permits are available for all residents who wish to have a parking spot. The apartment entity and parking permits entity have a one-to-many relationship because if an apartment has multiple residents who each have one parking permit, one apartment can have many parking permits. On the other hand, one parking permit is associated with only one apartment. *CONTRACTS? There are 3 apartment buildings within this housing corporation. The apartments entity has a one-to-many relationship with the buildings entity because there are many apartments in one building, but an apartment is in one building.
 
 ## Data Dictionary:
 
