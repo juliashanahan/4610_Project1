@@ -34,25 +34,18 @@ The apartment entity contains details regarding the size of the apartment, the c
 ## Data Dictionary:
 
 ![27EA16B1-4175-49C5-87A2-FEAA71CCCEF4](https://github.com/user-attachments/assets/b28eb736-4a08-412d-81dc-6e7c26f6bd20)
-![1999DF46-0B7E-4025-85A6-EBCF10FB5E70](https://github.com/user-attachments/assets/b372d7cc-00e8-4839-9b82-56a0b1341511)
-
-[BUILDINGS TABLE]
-
-![4D3033E7-6470-43CC-918F-DA8A54B51D60](https://github.com/user-attachments/assets/3644d3e1-74d5-4938-b137-e916fc937819)
-
-[RENT PAYMENTS TABLE]
-
-[MAINTENANCE REQUESTS TABLE]
-
-[ROOMMATES TABLE]
-
+![63A16ABC-B9FE-4C68-9682-0FCCB2401AC8](https://github.com/user-attachments/assets/30604c93-b503-4aea-a6a4-6e10e84dffb7)
+![47F452A6-54EC-4C56-9256-CAE55F9D2CD5](https://github.com/user-attachments/assets/43d2a1c2-45ca-4411-92ed-7e307b15c1dd)
+![A91200CD-1E28-48AB-98FE-4F22CF7E2B8A](https://github.com/user-attachments/assets/080e083a-653c-4b6e-8ad3-f592126ed835)
+![DEF43C41-06DB-4644-AB44-54ACED4E2FBF](https://github.com/user-attachments/assets/cc27765d-9b6c-467b-8ab8-02dbe0a9e307)
+![356D44E6-8319-4D68-B6BE-9C964FE614D7](https://github.com/user-attachments/assets/8cb1af20-b358-422d-ab5e-2c66daf2a7a4)
+![6878C40D-9F67-41A9-89BF-C60626F2ACAE](https://github.com/user-attachments/assets/912cd70d-9cf1-49c6-a984-79ef5b3a0ee6)
 ![94B09E6A-5B7B-44C5-8D21-50B73B30ADBD](https://github.com/user-attachments/assets/2b18ffd6-3f42-4a89-be35-27d768b577ca)
 ![86290B71-EBA8-47F3-8FB2-AA8348CB071A](https://github.com/user-attachments/assets/524df752-3be0-43ec-97c5-0967f37f10bd)
 ![64AB2DD6-E6A4-4D57-A81B-10ABBFA0F254](https://github.com/user-attachments/assets/84fac451-92f2-4058-87d3-38fbdfa5a59e)
 ![FFDE0BFD-D6AF-4D18-BA3F-FD0F0B42C64D](https://github.com/user-attachments/assets/e07e77fc-f9c9-45f0-8a55-7c6e79ad4224)
 ![148497EA-1B97-4C8B-8901-8DFDA9B5911B](https://github.com/user-attachments/assets/2b8e0c4a-402f-4ffe-8b78-22d95b1a295f)
 ![7C56D558-E389-4618-9BEA-A5B035FB0629](https://github.com/user-attachments/assets/4cfe44cb-0cf0-4150-8ca6-80e7972d350f)
-
 
 
 ## Queries: 
