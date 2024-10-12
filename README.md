@@ -28,5 +28,14 @@ Our model is based on the structure of a hypothetical housing corporation.
 ## Data Dictionary:
 
 ## Queries: 
+1. Query 1 lists all of the pending maintenance requests.
+
+2. Query 2 lists the student name, building name, and apartment number of all residents with an overdue rent payment.
+
+3. Query 3 lists the names and total rent cost for a year long lease for each resident.
+
+4. Query 4 lists the room number, number of bedrooms, number of bathrooms, monthly rent, and the name of the building for all apartments still available for rent.
+
+5. Query 5 lists the furniture inventory for each apartment by showing the apartment ID, the type of furniture, the quantity of each type, and the condition of the furniture. The results are ordered by the apartment ID and the type of furniture.
 
 ## Database Information:
