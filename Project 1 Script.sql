@@ -593,6 +593,7 @@ from Furniture_Inventory
 join Apartment on Apartment.idApartment = Furniture_Inventory.Apartment_idApartment
 order by idApartment, Furniture_Type;
 
+# Query to see the average cost of utilities per apartment over $100
 SELECT Apartment.Room_Number, Apartment.Number_Of_Bedrooms, AVG(Cost_Per_Month) AS 'avg Utilities'
 FROM Apartment
 JOIN Utilities ON Apartment.idApartment = Utilities.idApartment
