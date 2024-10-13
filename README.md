@@ -106,7 +106,7 @@ Query 7 lists the average cost of utilities per apartment that are over $100 per
 
 Needs to be fixed has errors
 
-Query 7 is benefical to management as they can use this to monitor the average cost of utilities per apartment and if there is an apartment where their average utilities is way higher than other apartments, that could be a sign of a leak or damage of electrical wires. 
+Query 7 is benefical to management as they can use this to monitor the average cost of utilities per apartment and if there is an apartment where their average utilities is way higher than other apartments, that could be a sign of a leak or damage of electrical wires. Management could know which apartment to go and make sure that everything is working properly for the student tenets. 
 
 --
 
