@@ -460,52 +460,55 @@ INSERT INTO `cs_bag15552`.`Student_has_Maintenance_Requests` (`Student_idStudent
 (19, 19),
 (20, 20);
 
--- Query to Find Pending Maintenance Requests
+-- TP Q1
 SELECT *  
 FROM Maintenance_Requests  
 WHERE Status = 'Pending';  
 
--- Query to find Overdue Rent Payments
+-- TP Q2
 SELECT *  
 FROM Student 
 JOIN Rent_Payments ON Student.Leases_idLeases = Rent_Payments.Leases_idLeases
 WHERE Status = 'Late';  
 
--- Query to Total Rent per Student for the year
+-- TP Q3
 SELECT First_Name, Last_Name, (Rent_Amount * 12) AS `Total_Rent`  
 FROM Student  
 JOIN Leases ON Leases_idLeases = idLeases;  
 
--- Query to Find Students with Active Students
+-- TP Q4
 select Student.First_Name, Student.Last_Name, Leases.Start_Date
 from Student
 join Leases  on Student.Leases_idLeases = Leases.idLeases
 where Leases.Status = 'Active';
 
--- Query to List Apartments Available for Rent:
+-- TP Q5
 select Apartment.Room_Number, Apartment.Number_Of_Bedrooms, Apartment.Number_Of_Bathrooms,
 Apartment.Rent, Buildings.Building_Name
 from Apartment
 join Buildings on Apartment.Buildings_idBuildings = Buildings.idBuildings
 where Apartment.Availability = 'Available';
 
--- Query to List Furniture Inventory per Apartment:
+-- TP Q6
 select Room_Number, idApartment, Furniture_Type, Quantity, Furniture_Inventory.Condition
 from Furniture_Inventory
 join Apartment on Apartment.idApartment = Furniture_Inventory.Apartment_idApartment
 order by idApartment, Furniture_Type;
 
+--TP Q7
 SELECT Apartment.Room_Number, Apartment.Number_Of_Bedrooms, AVG(Cost_Per_Month) AS 'avg Utilities'
 FROM Apartment
 JOIN Utilities ON Apartment.idApartment = Utilities.idApartment
 GROUP BY Apartment.Room_Number, Apartment.Number_Of_Bedrooms
 HAVING AVG(Cost_Per_Month)>100;
 
+--TP Q8
 select Room_Number, Condition from Apartment join Furniture_Inventory
 on Apartment.idApartment = Furniture_Inventory.idApartment
 group by Apartment.Room_Number
 having Condition = 'Poor';
 
+--TP Q9
 SELECT   
     Student.First_Name,  
     Student.Last_Name,  
