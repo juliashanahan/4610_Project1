@@ -460,42 +460,41 @@ INSERT INTO `cs_bag15552`.`Student_has_Maintenance_Requests` (`Student_idStudent
 (19, 19),
 (20, 20);
 
-# Query to Find Pending Maintenance Requests
+-- Query to Find Pending Maintenance Requests
 SELECT *  
 FROM Maintenance_Requests  
 WHERE Status = 'Pending';  
 
-# Query to find Overdue Rent Payments
+-- Query to find Overdue Rent Payments
 SELECT *  
 FROM Student 
 JOIN Rent_Payments ON Student.Leases_idLeases = Rent_Payments.Leases_idLeases
 WHERE Status = 'Late';  
 
-# Query to Total Rent per Student for the year
+-- Query to Total Rent per Student for the year
 SELECT First_Name, Last_Name, (Rent_Amount * 12) AS `Total_Rent`  
 FROM Student  
 JOIN Leases ON Leases_idLeases = idLeases;  
 
-# Query to Find Students with Active Students
+-- Query to Find Students with Active Students
 select Student.First_Name, Student.Last_Name, Leases.Start_Date
 from Student
 join Leases  on Student.Leases_idLeases = Leases.idLeases
 where Leases.Status = 'Active';
 
-# Query to List Apartments Available for Rent:
+-- Query to List Apartments Available for Rent:
 select Apartment.Room_Number, Apartment.Number_Of_Bedrooms, Apartment.Number_Of_Bathrooms,
 Apartment.Rent, Buildings.Building_Name
 from Apartment
 join Buildings on Apartment.Buildings_idBuildings = Buildings.idBuildings
 where Apartment.Availability = 'Available';
 
-# Query to List Furniture Inventory per Apartment:
+-- Query to List Furniture Inventory per Apartment:
 select Room_Number, idApartment, Furniture_Type, Quantity, Furniture_Inventory.Condition
 from Furniture_Inventory
 join Apartment on Apartment.idApartment = Furniture_Inventory.Apartment_idApartment
 order by idApartment, Furniture_Type;
 
-# query to list average cost of utilites over 100
 SELECT Apartment.Room_Number, Apartment.Number_Of_Bedrooms, AVG(Cost_Per_Month) AS 'avg Utilities'
 FROM Apartment
 JOIN Utilities ON Apartment.idApartment = Utilities.idApartment
