@@ -55,7 +55,7 @@ Query 1 lists all of the pending maintenance requests.
 
 Query 1 is beneficial for management because awareness of the pending maintenace requests allows them to monitor the workload of their maintenance staff, as well as confirm that requests are taken care of in a timely manner. By gaining a better understanding of their staff's workload, management can ensure they are not being underutilized or overutilized, leading to more efficient scheduling. More efficieny scheduling will also assist in confirming that requests are taken care of promptly, which is crucial for resident satisfaction. Furthermore, management can use this information to identify trends and recurring issues, allowing for better strategic planning for infrastructure and appliance updates.
 
-
+--
 
 Query 2 lists the student name, building name, and apartment number of all residents with an overdue rent payment.
 
@@ -64,7 +64,7 @@ Query 2 lists the student name, building name, and apartment number of all resid
 
 Query 2 is beneficial for management because it can help maintain a positive relationship with the resident. By prioritizing communication with the residents who have overdue payments, management can address the issue quickly and get it resolved before it becomes a larger problem. This query also allows management to enforce any policies in the lease for overdue payments, such as late fees.
 
-
+--
 
 Query 3 lists the names and total rent cost for a year long lease for each resident.
 
@@ -73,7 +73,7 @@ Query 3 lists the names and total rent cost for a year long lease for each resid
 
 Query 3 is beneficial for management because by knowing the total rent of each resident, it allows them to predict their annual revenue. By knowing the amount of revenue they can expect, management can use this information to evaluate their current pricing, and assess if the rent should be increased or decreased in the future.
 
-
+--
 
 Query 4 lists the room number, number of bedrooms, number of bathrooms, monthly rent, and the name of the building for all apartments still available for rent.
 
@@ -82,35 +82,41 @@ Query 4 lists the room number, number of bedrooms, number of bathrooms, monthly 
 
 Query 4 is beneficial to management because it will allow them to see which apartments and the details of the apartments that are available to any interested tenants. This information could affect their marketing efforts. For example, they may focus on promoting larger apartments with more bedrooms/bathrooms if these layouts are the ones that remain available. Additionally, they may be able to identify a trend in the unrented rooms. If there is a specific building that has significantly more vacancies, this may indicate a larger issue with things such as the location, the amenities, etc.
 
-
+--
 
 Query 5 lists the furniture inventory for each apartment by showing the apartment ID, the type of furniture, the quantity of each type, and the condition of the furniture. The results are ordered by the apartment ID and the type of furniture.
 
 <img width="771" alt="Screenshot 2024-10-13 at 3 57 04 PM" src="https://github.com/user-attachments/assets/39c63930-fdd4-49c2-9753-681ac63ab5f7">
 <img width="507" alt="Screenshot 2024-10-13 at 3 57 21 PM" src="https://github.com/user-attachments/assets/a1c8b021-1c6e-449a-a7c4-ea4ef572ed5c">
 
+--
+
 Query 6
 
 <img width="707" alt="Screenshot 2024-10-13 at 3 58 13 PM" src="https://github.com/user-attachments/assets/5be24e56-0bc3-448c-a8f2-24987c183958">
 <img width="378" alt="Screenshot 2024-10-13 at 3 58 32 PM" src="https://github.com/user-attachments/assets/7f593c06-dc81-4763-b71e-ea3571f84321">
 
+--
 
 Query 7
 
 Needs to be fixed has errors
 
+--
 
 Query 8
 
 <img width="724" alt="Screenshot 2024-10-13 at 3 59 15 PM" src="https://github.com/user-attachments/assets/6a34d2b5-0f9a-4615-9637-e37a6d2469e8">
 <img width="643" alt="Screenshot 2024-10-13 at 3 59 31 PM" src="https://github.com/user-attachments/assets/2c70a039-bbe1-411d-ba8f-93daa0dcf88c">
 
+--
 
 Query 9
 
 <img width="869" alt="Screenshot 2024-10-13 at 3 59 48 PM" src="https://github.com/user-attachments/assets/624b5e51-d06d-4078-a0de-1b1e69db06cb">
 <img width="504" alt="Screenshot 2024-10-13 at 4 00 03 PM" src="https://github.com/user-attachments/assets/c3114f1d-2a7b-457d-a88f-fe6d8fa803fa">
 
+--
 
 Query 10
 
