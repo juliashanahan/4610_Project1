@@ -38,6 +38,7 @@ The building entity contains information about the name and address of the build
 ![BCEE8D66-9EB3-482A-873B-1D7F906EE471](https://github.com/user-attachments/assets/2cc90c65-48c9-49f9-b03a-9e69507fa3a9)
 ![FD1545A5-9B30-446F-A43D-9BE2A45D2073](https://github.com/user-attachments/assets/4d15e3b4-ca08-424c-a122-919c4d5daca1)
 ![3107130F-F24C-4E28-AF91-591FB99F3804](https://github.com/user-attachments/assets/9c4b3c68-7834-4ec3-a901-96b7c8823182)
+![1DDB74ED-3B9B-422F-A637-B6CB47BB86F9](https://github.com/user-attachments/assets/cf64df0b-8aa5-4f48-b9d2-5baa8f5d71c0)
 ![C85A7164-2A41-4A17-96E1-D8AE92366D2D](https://github.com/user-attachments/assets/2f1831a5-f861-4a7e-9e26-ac964a0c2be3)
 ![35F6784E-48D5-49DF-90D3-99287F9442F6](https://github.com/user-attachments/assets/377a8886-97c2-4dda-8360-831d21b5e87f)
 ![46F9AC6D-AFE2-435E-81DF-4CDF8F632E27](https://github.com/user-attachments/assets/6349bc59-859f-449b-982c-fd48df7b1169)
