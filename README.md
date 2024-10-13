@@ -53,7 +53,7 @@ The building entity contains information about the name and address of the build
 ## Queries:
 Query 1 lists all of the pending maintenance requests.
 
-<img width="212" alt="Screenshot 2024-10-13 at 3 29 07 PM" src="https://github.com/user-attachments/assets/879f2b80-eae0-4f15-b88a-905fc3869320"
+<img width="212" alt="Screenshot 2024-10-13 at 3 29 07 PM" src="https://github.com/user-attachments/assets/879f2b80-eae0-4f15-b88a-905fc3869320">
 <img width="527" alt="Screenshot 2024-10-13 at 3 29 41 PM" src="https://github.com/user-attachments/assets/09e20f87-0155-4be2-8b8b-3ee9b0a441b1">
 
 
