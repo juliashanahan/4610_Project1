@@ -104,9 +104,12 @@ Query 6 is beneficial to management to know what furniture is in each apartment 
 
 Query 7 lists the average cost of utilities per apartment that are over $100 per month based on apartment room number and number of bedrooms.
 
-Needs to be fixed has errors
+<img width="798" alt="Screenshot 2024-10-13 at 7 56 56 PM" src="https://github.com/user-attachments/assets/330a5cfb-d220-4418-a1a1-a1caa1f74a49">
+<img width="369" alt="Screenshot 2024-10-13 at 7 57 50 PM" src="https://github.com/user-attachments/assets/89ef2236-fdb4-4fa9-982c-58ff53f1e9a6">
+
 
 Query 7 is benefical to management as they can use this to monitor the average cost of utilities per apartment and if there is an apartment where their average utilities is way higher than other apartments, that could be a sign of a leak or damage of electrical wires. Management could know which apartment to go and make sure that everything is working properly for the student tenets. 
+
 
 --
 
