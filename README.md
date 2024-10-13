@@ -11,13 +11,11 @@ Ctrl+Alt+Elite
 5. Yulianna Pazymino [@yuliapazymino](https://github.com/yuliapazymino)
 
 ## Scenario Description:
-As universities grow and student populations increase, the management of off-campus student housing becomes more complex. Our project focuses on developing a Student Housing Management System that streamlines the operations of student accommodations.
+As universities grow and student populations increase, the management of off-campus student housing becomes more complex. Our project focuses on developing a housing management database that showcases the operations of a student living apartment corporation.
 
-This system is designed to help housing administrators, students, and building managers efficiently manage various aspects of student housing, including rent payments, lease agreements, maintenance requests, utilities, and more. The database will provide a centralized platform to track apartment availability, process rent payments, and handle maintenance requests. It will also support additional functionalities such as parking permit management, and furniture inventory.
+This system is designed to display the workings between the housing administrators and the students, as well as how the  corporation manages various aspects of student housing, including rent payments, lease agreements, maintenance requests, utilities, and more. The database will provide a centralized platform to track apartment availability, process rent payments, and handle maintenance requests. It will also support additional functionalities such as parking permit management, and furniture inventory.
 
-From a managerial perspective, this system will allow housing officials to gain valuable insights into occupancy rates, maintenance costs, and rent collection trends, while students will benefit from a more efficient process for managing their housing experience. The queries will offer data-driven insights for them to make informed decisions on areas such as budget allocation, facility maintenance, and room assignments.
-
-Our solution will cater to university housing departments, student landlords, and off-campus property managers who wish to manage their student properties efficiently and provide an optimal living environment for students.
+From a managerial perspective, this database will allow management to gain valuable insights into concepts such as occupancy rates, maintenance costs, and rent collection trends. The queries will offer data-driven insights for them to make informed decisions on areas such as budget allocation, facility maintenance, and room assignments.
 
 ## Data Model:
 ![Model project 1](https://github.com/user-attachments/assets/ff755ac2-1a48-482b-bb81-0c6fd8a15625)
