@@ -460,55 +460,55 @@ INSERT INTO `cs_bag15552`.`Student_has_Maintenance_Requests` (`Student_idStudent
 (19, 19),
 (20, 20);
 
--- TP Q1
+-- TP_Q1
 SELECT *  
 FROM Maintenance_Requests  
 WHERE Status = 'Pending';  
 
--- TP Q2
+-- TP_Q2
 SELECT *  
 FROM Student 
 JOIN Rent_Payments ON Student.Leases_idLeases = Rent_Payments.Leases_idLeases
 WHERE Status = 'Late';  
 
--- TP Q3
+-- TP_Q3
 SELECT First_Name, Last_Name, (Rent_Amount * 12) AS `Total_Rent`  
 FROM Student  
 JOIN Leases ON Leases_idLeases = idLeases;  
 
--- TP Q4
+-- TP_Q4
 select Student.First_Name, Student.Last_Name, Leases.Start_Date
 from Student
 join Leases  on Student.Leases_idLeases = Leases.idLeases
 where Leases.Status = 'Active';
 
--- TP Q5
+-- TP_Q5
 select Apartment.Room_Number, Apartment.Number_Of_Bedrooms, Apartment.Number_Of_Bathrooms,
 Apartment.Rent, Buildings.Building_Name
 from Apartment
 join Buildings on Apartment.Buildings_idBuildings = Buildings.idBuildings
 where Apartment.Availability = 'Available';
 
--- TP Q6
+-- TP_Q6
 select Room_Number, idApartment, Furniture_Type, Quantity, Furniture_Inventory.Condition
 from Furniture_Inventory
 join Apartment on Apartment.idApartment = Furniture_Inventory.Apartment_idApartment
 order by idApartment, Furniture_Type;
 
---TP Q7
+--TP_Q7
 SELECT Apartment.Room_Number, Apartment.Number_Of_Bedrooms, AVG(Cost_Per_Month) AS 'avg Utilities'
 FROM Apartment
 JOIN Utilities ON Apartment.idApartment = Utilities.idApartment
 GROUP BY Apartment.Room_Number, Apartment.Number_Of_Bedrooms
 HAVING AVG(Cost_Per_Month)>100;
 
---TP Q8
+--TP_Q8
 select Room_Number, Condition from Apartment join Furniture_Inventory
 on Apartment.idApartment = Furniture_Inventory.idApartment
 group by Apartment.Room_Number
 having Condition = 'Poor';
 
---TP Q9
+--TP_Q9
 SELECT   
     Student.First_Name,  
     Student.Last_Name,  
