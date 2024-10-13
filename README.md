@@ -84,14 +84,14 @@ Query 4 is beneficial to management because it will allow them to see which apar
 
 --
 
-Query 5 lists the furniture inventory for each apartment by showing the apartment ID, the type of furniture, the quantity of each type, and the condition of the furniture. The results are ordered by the apartment ID and the type of furniture.
+Query 5
 
 <img width="771" alt="Screenshot 2024-10-13 at 3 57 04 PM" src="https://github.com/user-attachments/assets/39c63930-fdd4-49c2-9753-681ac63ab5f7">
 <img width="507" alt="Screenshot 2024-10-13 at 3 57 21 PM" src="https://github.com/user-attachments/assets/a1c8b021-1c6e-449a-a7c4-ea4ef572ed5c">
 
 --
 
-Query 6
+Query 6 lists the furniture inventory for each apartment by showing the apartment ID, the type of furniture, the quantity of each type, and the condition of the furniture. The results are ordered by the apartment ID and the type of furniture.
 
 <img width="707" alt="Screenshot 2024-10-13 at 3 58 13 PM" src="https://github.com/user-attachments/assets/5be24e56-0bc3-448c-a8f2-24987c183958">
 <img width="378" alt="Screenshot 2024-10-13 at 3 58 32 PM" src="https://github.com/user-attachments/assets/7f593c06-dc81-4763-b71e-ea3571f84321">
