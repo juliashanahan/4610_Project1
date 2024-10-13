@@ -20,7 +20,7 @@ From a managerial perspective, this system will allow housing officials to gain 
 Our solution will cater to university housing departments, student landlords, and off-campus property managers who wish to manage their student properties efficiently and provide an optimal living environment for students.
 
 ## Data Model:
-![Model project 1](https://github.com/user-attachments/assets/14c07fe7-a483-45ea-bc96-11df706f58ea)
+![Model project 1](https://github.com/user-attachments/assets/ff755ac2-1a48-482b-bb81-0c6fd8a15625)
 
 
 Our model represents a hypothetical housing corporation for off-campus student living for managing apartments, tenants, leases, maintenance requests, and associated utilities and staff in an apartment complex. 
