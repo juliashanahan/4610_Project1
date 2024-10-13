@@ -86,8 +86,8 @@ Query 4 is beneficial to management because it will allow them to see which apar
 
 Query 5
 
-<img width="771" alt="Screenshot 2024-10-13 at 3 57 04 PM" src="https://github.com/user-attachments/assets/39c63930-fdd4-49c2-9753-681ac63ab5f7">
-<img width="507" alt="Screenshot 2024-10-13 at 3 57 21 PM" src="https://github.com/user-attachments/assets/a1c8b021-1c6e-449a-a7c4-ea4ef572ed5c">
+<img width="1048" alt="Screenshot 2024-10-13 at 7 27 34 PM" src="https://github.com/user-attachments/assets/c94f2596-86a1-4c66-a1c3-1bfcbf2e0f49">
+<img width="215" alt="Screenshot 2024-10-13 at 7 27 42 PM" src="https://github.com/user-attachments/assets/f0c6a504-1720-441c-a9b2-9bca4e35a7c5">
 
 --
 
