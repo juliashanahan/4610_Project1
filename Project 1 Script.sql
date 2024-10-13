@@ -495,7 +495,7 @@ from Furniture_Inventory
 join Apartment on Apartment.idApartment = Furniture_Inventory.Apartment_idApartment
 order by idApartment, Furniture_Type;
 
---TP_Q7
+-- TP_Q7
 SELECT Apartment.Room_Number, Apartment.Number_Of_Bedrooms, AVG(Cost_Per_Month) AS 'avg Utilities'
 FROM Apartment
 JOIN Utilities ON Apartment.idApartment = Utilities.idApartment
@@ -503,7 +503,7 @@ GROUP BY Apartment.Room_Number, Apartment.Number_Of_Bedrooms
 HAVING AVG(Cost_Per_Month)>100;
 
 
---TP_Q8
+-- TP_Q8
 SELECT   
     Student.First_Name,  
     Student.Last_Name,  
@@ -519,7 +519,7 @@ FROM
 WHERE   
     Rent_Payments.Status = 'Paid';  
 
---TP_Q10
+-- TP_Q9
 SELECT a.Room_Number, a.Number_Of_Bedrooms, a.Number_Of_Bathrooms, a.Rent, b.Building_Name
 FROM Apartment a
 JOIN Buildings b ON a.Buildings_idBuildings = b.idBuildings
