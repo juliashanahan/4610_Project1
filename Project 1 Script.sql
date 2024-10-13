@@ -15,6 +15,39 @@ CREATE SCHEMA IF NOT EXISTS `cs_bag15552` DEFAULT CHARACTER SET utf8 ;
 USE `cs_bag15552` ;
 
 -- -----------------------------------------------------
+-- Table `cs_bag15552`.`Buildings`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cs_bag15552`.`Buildings` (
+  `idBuildings` INT NOT NULL,
+  `Building_Name` VARCHAR(45) NULL,
+  `Address` VARCHAR(45) NULL,
+  `Total_Apartments` INT NULL,
+  PRIMARY KEY (`idBuildings`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cs_bag15552`.`Apartment`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cs_bag15552`.`Apartment` (
+  `idApartment` INT NOT NULL,
+  `Room_Number` INT NULL,
+  `Number_Of_Bedrooms` INT NULL,
+  `Number_Of_Bathrooms` INT NULL,
+  `Rent` INT NULL,
+  `Availability` VARCHAR(45) NULL,
+  `Buildings_idBuildings` INT NOT NULL,
+  PRIMARY KEY (`idApartment`),
+  INDEX `fk_Apartment_Buildings1_idx` (`Buildings_idBuildings` ASC) VISIBLE,
+  CONSTRAINT `fk_Apartment_Buildings1`
+    FOREIGN KEY (`Buildings_idBuildings`)
+    REFERENCES `cs_bag15552`.`Buildings` (`idBuildings`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `cs_bag15552`.`Leases`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `cs_bag15552`.`Leases` (
@@ -24,7 +57,14 @@ CREATE TABLE IF NOT EXISTS `cs_bag15552`.`Leases` (
   `Rent_Amount` INT NULL,
   `Security_Deposit` INT NULL,
   `Status` VARCHAR(45) NULL,
-  PRIMARY KEY (`idLeases`))
+  `Apartment_idApartment` INT NOT NULL,
+  PRIMARY KEY (`idLeases`),
+  INDEX `fk_Leases_Apartment1_idx` (`Apartment_idApartment` ASC) VISIBLE,
+  CONSTRAINT `fk_Leases_Apartment1`
+    FOREIGN KEY (`Apartment_idApartment`)
+    REFERENCES `cs_bag15552`.`Apartment` (`idApartment`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -50,55 +90,15 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `cs_bag15552`.`Buildings`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `cs_bag15552`.`Buildings` (
-  `idBuildings` INT NOT NULL,
-  `Building_Name` VARCHAR(45) NULL,
-  `Address` VARCHAR(45) NULL,
-  `Total_Apartments` INT NULL,
-  PRIMARY KEY (`idBuildings`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `cs_bag15552`.`Apartment`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `cs_bag15552`.`Apartment` (
-  `idApartment` INT NOT NULL,
-  `Room_Number` INT NULL,
-  `Number_Of_Bedrooms` INT NULL,
-  `Number_Of_Bathrooms` INT NULL,
-  `Rent` INT NULL,
-  `Availability` VARCHAR(45) NULL,
-  `Leases_idLeases` INT NOT NULL,
-  `Buildings_idBuildings` INT NOT NULL,
-  PRIMARY KEY (`idApartment`),
-  INDEX `fk_Apartment_Leases1_idx` (`Leases_idLeases` ASC) VISIBLE,
-  INDEX `fk_Apartment_Buildings1_idx` (`Buildings_idBuildings` ASC) VISIBLE,
-  CONSTRAINT `fk_Apartment_Leases1`
-    FOREIGN KEY (`Leases_idLeases`)
-    REFERENCES `cs_bag15552`.`Leases` (`idLeases`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Apartment_Buildings1`
-    FOREIGN KEY (`Buildings_idBuildings`)
-    REFERENCES `cs_bag15552`.`Buildings` (`idBuildings`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `cs_bag15552`.`Rent_Payments`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `cs_bag15552`.`Rent_Payments` (
-  `idRent_Payments` INT NOT NULL,
+  `idRent Payments` INT NOT NULL,
   `Payment_Date` DATE NULL,
   `Amount_Paid` INT NULL,
   `Status` VARCHAR(45) NULL,
   `Leases_idLeases` INT NOT NULL,
-  PRIMARY KEY (`idRent_Payments`),
+  PRIMARY KEY (`idRent Payments`),
   INDEX `fk_Rent Payments_Leases1_idx` (`Leases_idLeases` ASC) VISIBLE,
   CONSTRAINT `fk_Rent Payments_Leases1`
     FOREIGN KEY (`Leases_idLeases`)
@@ -117,31 +117,7 @@ CREATE TABLE IF NOT EXISTS `cs_bag15552`.`Maintenance_Requests` (
   `Description` VARCHAR(200) NULL,
   `Status` VARCHAR(45) NULL,
   `Completion_Date` DATE NULL,
-  `Student_idStudent` INT NOT NULL,
-  PRIMARY KEY (`idMaintenance_Requests`),
-  INDEX `fk_Maintenance Requests_Student1_idx` (`Student_idStudent` ASC) VISIBLE,
-  CONSTRAINT `fk_Maintenance Requests_Student1`
-    FOREIGN KEY (`Student_idStudent`)
-    REFERENCES `cs_bag15552`.`Student` (`idStudent`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `cs_bag15552`.`Roommates`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `cs_bag15552`.`Roommates` (
-  `idRoommates` INT NOT NULL,
-  `Shared_Lease` VARCHAR(45) NULL,
-  `Apartment_idApartment` INT NOT NULL,
-  PRIMARY KEY (`idRoommates`),
-  INDEX `fk_Roommates_Apartment1_idx` (`Apartment_idApartment` ASC) VISIBLE,
-  CONSTRAINT `fk_Roommates_Apartment1`
-    FOREIGN KEY (`Apartment_idApartment`)
-    REFERENCES `cs_bag15552`.`Apartment` (`idApartment`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  PRIMARY KEY (`idMaintenance_Requests`))
 ENGINE = InnoDB;
 
 
@@ -155,24 +131,6 @@ CREATE TABLE IF NOT EXISTS `cs_bag15552`.`Utilities` (
   PRIMARY KEY (`idUtilities`),
   INDEX `fk_Utilities_Apartment1_idx` (`Apartment_idApartment` ASC) VISIBLE,
   CONSTRAINT `fk_Utilities_Apartment1`
-    FOREIGN KEY (`Apartment_idApartment`)
-    REFERENCES `cs_bag15552`.`Apartment` (`idApartment`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `cs_bag15552`.`Contracts`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `cs_bag15552`.`Contracts` (
-  `idContracts` INT NOT NULL,
-  `Signed_Date` DATE NULL,
-  `Expiration_Date` DATE NULL,
-  `Apartment_idApartment` INT NOT NULL,
-  PRIMARY KEY (`idContracts`),
-  INDEX `fk_Contracts_Apartment1_idx` (`Apartment_idApartment` ASC) VISIBLE,
-  CONSTRAINT `fk_Contracts_Apartment1`
     FOREIGN KEY (`Apartment_idApartment`)
     REFERENCES `cs_bag15552`.`Apartment` (`idApartment`)
     ON DELETE NO ACTION
@@ -234,18 +192,21 @@ CREATE TABLE IF NOT EXISTS `cs_bag15552`.`Maintenance_Staff` (
 ENGINE = InnoDB;
 
 
-CREATE TABLE IF NOT EXISTS `cs_bag15552`.`Apartment_has_Maintenance_Requests` (
-  `Apartment_idApartment` INT NOT NULL,
+-- -----------------------------------------------------
+-- Table `cs_bag15552`.`Student_has_Maintenance_Requests`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cs_bag15552`.`Student_has_Maintenance_Requests` (
+  `Student_idStudent` INT NOT NULL,
   `Maintenance_Requests_idMaintenance_Requests` INT NOT NULL,
-  PRIMARY KEY (`Apartment_idApartment`, `Maintenance_Requests_idMaintenance_Requests`),
-  INDEX `fk_Apartment_has_Maintenance_Requests_Maintenance_Requests1_idx` (`Maintenance_Requests_idMaintenance_Requests` ASC) VISIBLE,
-  INDEX `fk_Apartment_has_Maintenance_Requests_Apartment1_idx` (`Apartment_idApartment` ASC) VISIBLE,
-  CONSTRAINT `fk_Apartment_has_Maintenance_Requests_Apartment1`
-    FOREIGN KEY (`Apartment_idApartment`)
-    REFERENCES `cs_bag15552`.`Apartment` (`idApartment`)
+  PRIMARY KEY (`Student_idStudent`, `Maintenance_Requests_idMaintenance_Requests`),
+  INDEX `fk_Student_has_Maintenance_Requests_Maintenance_Requests1_idx` (`Maintenance_Requests_idMaintenance_Requests` ASC) VISIBLE,
+  INDEX `fk_Student_has_Maintenance_Requests_Student1_idx` (`Student_idStudent` ASC) VISIBLE,
+  CONSTRAINT `fk_Student_has_Maintenance_Requests_Student1`
+    FOREIGN KEY (`Student_idStudent`)
+    REFERENCES `cs_bag15552`.`Student` (`idStudent`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Apartment_has_Maintenance_Requests_Maintenance_Requests1`
+  CONSTRAINT `fk_Student_has_Maintenance_Requests_Maintenance_Requests1`
     FOREIGN KEY (`Maintenance_Requests_idMaintenance_Requests`)
     REFERENCES `cs_bag15552`.`Maintenance_Requests` (`idMaintenance_Requests`)
     ON DELETE NO ACTION
@@ -256,308 +217,249 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
--- -----------------------------------------------------
--- Insert Data into `cs_bag15552`.`Leases`
--- -----------------------------------------------------
-INSERT INTO `cs_bag15552`.`Leases` (`idLeases`, `Start_Date`, `End_Date`, `Rent_Amount`, `Security_Deposit`, `Status`) VALUES
-(1, '2023-01-01', '2024-01-01', 1200, 600, 'Active'),  
-(2, '2023-02-01', '2024-02-01', 1300, 650, 'Active'),  
-(3, '2023-03-01', '2024-03-01', 1100, 550, 'Active'),  
-(4, '2023-04-01', '2024-04-01', 1250, 625, 'Active'),  
-(5, '2023-05-01', '2024-05-01', 1400, 700, 'Active'),  
-(6, '2023-06-01', '2024-06-01', 1100, 550, 'Active'),  
-(7, '2023-07-01', '2024-07-01', 1150, 575, 'Active'),  
-(8, '2023-08-01', '2024-08-01', 1250, 625, 'Active'),  
-(9, '2023-09-01', '2024-09-01', 1350, 675, 'Active'),  
-(10, '2023-10-01', '2024-10-01', 1550, 775, 'Active'),  
-(11, '2023-11-01', '2024-11-01', 1600, 800, 'Active'),  
-(12, '2023-12-01', '2024-12-01', 1700, 850, 'Active'),  
-(13, '2024-01-01', '2025-01-01', 1800, 900, 'Active'),  
-(14, '2024-02-01', '2025-02-01', 1900, 950, 'Active'),  
-(15, '2024-03-01', '2025-03-01', 2000, 1000, 'Active'),  
-(16, '2024-04-01', '2025-04-01', 2100, 1050, 'Active'),  
-(17, '2024-05-01', '2025-05-01', 2200, 1100, 'Active'),  
-(18, '2024-06-01', '2025-06-01', 2300, 1150, 'Active'),  
-(19, '2024-07-01', '2025-07-01', 2400, 1200, 'Active'),  
-(20, '2024-08-01', '2025-08-01', 2500, 1250, 'Active');
 
--- -----------------------------------------------------
--- Insert Data into `cs_bag15552`.`Buildings`
--- -----------------------------------------------------
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+-- Insert Data into `Buildings`
 INSERT INTO `cs_bag15552`.`Buildings` (`idBuildings`, `Building_Name`, `Address`, `Total_Apartments`) VALUES
-(1, 'Sunrise Apartments', '123 Maple Street', 100),  
-(2, 'Oakwood Towers', '456 Oak Avenue', 150),  
-(3, 'Pinecrest Residence', '789 Pine Road', 120);
--- -----------------------------------------------------
--- Insert Data into `cs_bag15552`.`Apartment`
--- -----------------------------------------------------
-INSERT INTO `cs_bag15552`.`Apartment` (`idApartment`, `Room_Number`, `Number_Of_Bedrooms`, `Number_Of_Bathrooms`, `Rent`, `Availability`, `Leases_idLeases`, `Buildings_idBuildings`) VALUES
-(1, 101, 2, 1, 1200, 'Available', 1, 1),  
-(2, 102, 3, 2, 1300, 'Occupied', 2, 1),  
-(3, 201, 1, 1, 1100, 'Available', 3, 1),  
-(4, 202, 2, 2, 1250, 'Occupied', 4, 1),  
-(5, 301, 2, 1, 1400, 'Available', 5, 2),  
-(6, 302, 1, 1, 1100, 'Occupied', 6, 2),  
-(7, 401, 1, 1, 1150, 'Available', 7, 2),  
-(8, 402, 2, 2, 1250, 'Occupied', 8, 2),  
-(9, 501, 3, 2, 1350, 'Available', 9, 3),  
-(10, 502, 2, 1, 1550, 'Occupied', 10, 3),  
-(11, 601, 3, 2, 1600, 'Available', 11, 1),  
-(12, 602, 2, 2, 1700, 'Occupied', 12, 1),  
-(13, 701, 1, 1, 1800, 'Available', 13, 2),  
-(14, 702, 3, 2, 1900, 'Occupied', 14, 2),  
-(15, 801, 2, 1, 2000, 'Available', 15, 3),  
-(16, 802, 2, 2, 2100, 'Occupied', 16, 3),  
-(17, 901, 3, 2, 2200, 'Available', 17, 3),  
-(18, 902, 1, 1, 2300, 'Occupied', 18, 2),  
-(19, 1001, 2, 2, 2400, 'Available', 19, 3),  
-(20, 1002, 3, 2, 2500, 'Occupied', 20, 3);
--- -----------------------------------------------------
--- Insert Data into `cs_bag15552`.`Student`
--- -----------------------------------------------------
+(1, 'Sunrise Apartments', '123 Maple Street', 50),
+(2, 'Oakwood Towers', '456 Oak Avenue', 75),
+(3, 'Pinecrest Residence', '789 Pine Road', 60);
+
+-- Insert Data into `Apartment`
+INSERT INTO `cs_bag15552`.`Apartment` (`idApartment`, `Room_Number`, `Number_Of_Bedrooms`, `Number_Of_Bathrooms`, `Rent`, `Availability`, `Buildings_idBuildings`) VALUES
+(1, 101, 2, 1, 1200, 'Available', 1),
+(2, 102, 3, 2, 1300, 'Occupied', 1),
+(3, 201, 1, 1, 1100, 'Available', 2),
+(4, 202, 2, 2, 1250, 'Occupied', 2),
+(5, 301, 2, 1, 1400, 'Available', 3),
+(6, 302, 1, 1, 1100, 'Occupied', 3),
+(7, 303, 3, 2, 1500, 'Available', 1),
+(8, 304, 2, 2, 1600, 'Occupied', 1),
+(9, 305, 1, 1, 1200, 'Available', 2),
+(10, 306, 2, 1, 1300, 'Occupied', 2),
+(11, 307, 3, 2, 1450, 'Available', 3),
+(12, 308, 1, 1, 1100, 'Occupied', 3),
+(13, 309, 2, 2, 1550, 'Available', 1),
+(14, 310, 3, 2, 1650, 'Occupied', 1),
+(15, 311, 1, 1, 1150, 'Available', 2),
+(16, 312, 2, 2, 1350, 'Occupied', 2),
+(17, 313, 3, 2, 1700, 'Available', 3),
+(18, 314, 1, 1, 1200, 'Occupied', 3),
+(19, 315, 2, 1, 1300, 'Available', 1),
+(20, 316, 3, 2, 1500, 'Occupied', 1);
+
+-- Insert Data into `Leases`
+INSERT INTO `cs_bag15552`.`Leases` (`idLeases`, `Start_Date`, `End_Date`, `Rent_Amount`, `Security_Deposit`, `Status`, `Apartment_idApartment`) VALUES
+(1, '2023-01-01', '2024-01-01', 1200, 600, 'Active', 1),
+(2, '2023-02-01', '2024-02-01', 1300, 650, 'Active', 2),
+(3, '2023-03-01', '2024-03-01', 1100, 550, 'Active', 3),
+(4, '2023-04-01', '2024-04-01', 1250, 625, 'Active', 4),
+(5, '2023-05-01', '2024-05-01', 1400, 700, 'Active', 5),
+(6, '2023-06-01', '2024-06-01', 1100, 550, 'Active', 6),
+(7, '2023-07-01', '2024-07-01', 1500, 750, 'Active', 7),
+(8, '2023-08-01', '2024-08-01', 1600, 800, 'Active', 8),
+(9, '2023-09-01', '2024-09-01', 1200, 600, 'Active', 9),
+(10, '2023-10-01', '2024-10-01', 1300, 650, 'Active', 10),
+(11, '2023-01-01', '2024-01-01', 1450, 725, 'Active', 11),
+(12, '2023-02-01', '2024-02-01', 1100, 550, 'Active', 12),
+(13, '2023-03-01', '2024-03-01', 1550, 775, 'Active', 13),
+(14, '2023-04-01', '2024-04-01', 1650, 825, 'Active', 14),
+(15, '2023-05-01', '2024-05-01', 1150, 575, 'Active', 15),
+(16, '2023-06-01', '2024-06-01', 1350, 675, 'Active', 16),
+(17, '2023-07-01', '2024-07-01', 1700, 850, 'Active', 17),
+(18, '2023-08-01', '2024-08-01', 1200, 600, 'Active', 18),
+(19, '2023-09-01', '2024-09-01', 1300, 650, 'Active', 19),
+(20, '2023-10-01', '2024-10-01', 1500, 750, 'Active', 20);
+
+-- Insert Data into `Student`
 INSERT INTO `cs_bag15552`.`Student` (`idStudent`, `First_Name`, `Last_Name`, `Email`, `Phone`, `Gender`, `Leases_idLeases`) VALUES
-(1, 'John', 'Doe', 'john.doe@example.com', '555-0100', 'Male', 1),  
-(2, 'Jane', 'Smith', 'jane.smith@example.com', '555-0101', 'Female', 2),  
-(3, 'Mike', 'Brown', 'mike.brown@example.com', '555-0102', 'Male', 3),  
-(4, 'Emily', 'Davis', 'emily.davis@example.com', '555-0103', 'Female', 4),  
-(5, 'Chris', 'Johnson', 'chris.johnson@example.com', '555-0104', 'Male', 5),  
-(6, 'Pat', 'Wilson', 'pat.wilson@example.com', '555-0105', 'Non-binary', 6),  
-(7, 'Taylor', 'Garcia', 'taylor.garcia@example.com', '555-0106', 'Female', 7),  
-(8, 'Morgan', 'Martinez', 'morgan.martinez@example.com', '555-0107', 'Male', 8),  
-(9, 'Jordan', 'Hernandez', 'jordan.hernandez@example.com', '555-0108', 'Non-binary', 9),  
-(10, 'Riley', 'Lopez', 'riley.lopez@example.com', '555-0109', 'Female', 10),  
-(11, 'Sam', 'Thompson', 'sam.thompson@example.com', '555-0110', 'Male', 11),
-(12, 'Alex', 'Moore', 'alex.moore@example.com', '555-0111', 'Non-binary', 12),
-(13, 'Casey', 'Clark', 'casey.clark@example.com', '555-0112', 'Female', 13),
-(14, 'Jamie', 'Lee', 'jamie.lee@example.com', '555-0113', 'Male', 14),
-(15, 'Dana', 'White', 'dana.white@example.com', '555-0114', 'Female', 15),
-(16, 'Taylor', 'King', 'taylor.king@example.com', '555-0115', 'Non-binary', 16),
-(17, 'Jordan', 'Young', 'jordan.young@example.com', '555-0116', 'Male', 17),
-(18, 'Skylar', 'Wright', 'skylar.wright@example.com', '555-0117', 'Female', 18),
-(19, 'Charlie', 'Hall', 'charlie.hall@example.com', '555-0118', 'Male', 19),  
-(20, 'Drew', 'Adams', 'drew.adams@example.com', '555-0119', 'Female', 20);
+(1, 'John', 'Doe', 'john.doe@example.com', '555-0101', 'Male', 1),
+(2, 'Jane', 'Smith', 'jane.smith@example.com', '555-0102', 'Female', 2),
+(3, 'Mike', 'Brown', 'mike.brown@example.com', '555-0103', 'Male', 3),
+(4, 'Emily', 'Davis', 'emily.davis@example.com', '555-0104', 'Female', 4),
+(5, 'Chris', 'Johnson', 'chris.johnson@example.com', '555-0105', 'Male', 5),
+(6, 'Pat', 'Wilson', 'pat.wilson@example.com', '555-0106', 'Non-binary', 6),
+(7, 'Taylor', 'Garcia', 'taylor.garcia@example.com', '555-0107', 'Female', 7),
+(8, 'Morgan', 'Martinez', 'morgan.martinez@example.com', '555-0108', 'Male', 8),
+(9, 'Jordan', 'Hernandez', 'jordan.hernandez@example.com', '555-0109', 'Non-binary', 9),
+(10, 'Riley', 'Lopez', 'riley.lopez@example.com', '555-0110', 'Female', 10),
+(11, 'Alex', 'Wright', 'alex.wright@example.com', '555-0111', 'Male', 11),
+(12, 'Sam', 'Miller', 'sam.miller@example.com', '555-0112', 'Female', 12),
+(13, 'Jamie', 'Green', 'jamie.green@example.com', '555-0113', 'Non-binary', 13),
+(14, 'Taylor', 'Hughes', 'taylor.hughes@example.com', '555-0114', 'Male', 14),
+(15, 'Casey', 'White', 'casey.white@example.com', '555-0115', 'Female', 15),
+(16, 'Drew', 'Harris', 'drew.harris@example.com', '555-0116', 'Male', 16),
+(17, 'Jesse', 'Clark', 'jesse.clark@example.com', '555-0117', 'Non-binary', 17),
+(18, 'Dana', 'Moore', 'dana.moore@example.com', '555-0118', 'Female', 18),
+(19, 'Charlie', 'Rivera', 'charlie.rivera@example.com', '555-0119', 'Male', 19),
+(20, 'Casey', 'Patterson', 'casey.patterson@example.com', '555-0120', 'Female', 20);
 
--- -----------------------------------------------------
--- Insert Data into `cs_bag15552`.`Rent_Payments`
--- -----------------------------------------------------
-INSERT INTO `cs_bag15552`.`Rent_Payments` (`idRent_Payments`, `Payment_Date`, `Amount_Paid`, `Status`, `Leases_idLeases`) VALUES
-(1, '2023-01-05', 1200, 'Paid', 1),  
-(2, '2023-02-05', 1300, 'Paid', 2),  
-(3, '2023-03-05', 1100, 'Pending', 3),  
-(4, '2023-04-05', 1250, 'Paid', 4),  
-(5, '2023-05-05', 1400, 'Late', 5),  
-(6, '2023-06-05', 1100, 'Paid', 6),  
-(7, '2023-07-05', 1150, 'Pending', 7),  
-(8, '2023-08-05', 1250, 'Paid', 8),  
-(9, '2023-09-05', 1350, 'Paid', 9),  
-(10, '2023-10-05', 1550, 'Late', 10),  
-(11, '2023-11-05', 1600, 'Paid', 11),  
-(12, '2023-12-05', 1700, 'Paid', 12),  
-(13, '2024-01-05', 1800, 'Pending', 13),  
-(14, '2024-02-05', 1900, 'Paid', 14),  
-(15, '2024-03-05', 2000, 'Paid', 15),  
-(16, '2024-04-05', 2100, 'Late', 16),  
-(17, '2024-05-05', 2200, 'Paid', 17),  
-(18, '2024-06-05', 2300, 'Paid', 18),  
-(19, '2024-07-05', 2400, 'Paid', 19),  
-(20, '2024-08-05', 2500, 'Paid', 20);
+-- Insert Data into `Rent_Payments`
+INSERT INTO `cs_bag15552`.`Rent_Payments` (`idRent Payments`, `Payment_Date`, `Amount_Paid`, `Status`, `Leases_idLeases`) VALUES
+(1, '2023-01-05', 1200, 'Paid', 1),
+(2, '2023-02-05', 1300, 'Paid', 2),
+(3, '2023-03-05', 1100, 'Pending', 3),
+(4, '2023-04-05', 1250, 'Paid', 4),
+(5, '2023-05-05', 1400, 'Late', 5),
+(6, '2023-06-05', 1100, 'Paid', 6),
+(7, '2023-07-05', 1500, 'Pending', 7),
+(8, '2023-08-05', 1600, 'Paid', 8),
+(9, '2023-09-05', 1200, 'Paid', 9),
+(10, '2023-10-05', 1300, 'Late', 10),
+(11, '2023-01-05', 1450, 'Paid', 11),
+(12, '2023-02-05', 1100, 'Paid', 12),
+(13, '2023-03-05', 1550, 'Pending', 13),
+(14, '2023-04-05', 1650, 'Paid', 14),
+(15, '2023-05-05', 1150, 'Late', 15),
+(16, '2023-06-05', 1350, 'Paid', 16),
+(17, '2023-07-05', 1700, 'Pending', 17),
+(18, '2023-08-05', 1200, 'Paid', 18),
+(19, '2023-09-05', 1300, 'Paid', 19),
+(20, '2023-10-05', 1500, 'Late', 20);
 
--- -----------------------------------------------------
--- Insert Data into `cs_bag15552`.`Maintenance_Requests`
--- -----------------------------------------------------
-INSERT INTO `cs_bag15552`.`Maintenance_Requests` (`idMaintenance_Requests`, `Request_Date`, `Description`, `Status`, `Completion_Date`, `Student_idStudent`) VALUES
-(1, '2023-01-10', 'Leaky faucet in kitchen', 'Completed', '2023-01-15', 1),  
-(2, '2023-02-12', 'Broken window in bedroom', 'In Progress', NULL, 2),  
-(3, '2023-03-14', 'Heating system malfunction', 'Completed', '2023-03-20', 3),  
-(4, '2023-04-16', 'Electrical issues in living room', 'Pending', NULL, 4),  
-(5, '2023-05-18', 'Clogged bathroom drain', 'Completed', '2023-05-22', 5),  
-(6, '2023-06-20', 'Pest control needed in kitchen', 'In Progress', NULL, 6),  
-(7, '2023-07-22', 'Air conditioner not working', 'Completed', '2023-07-30', 7),  
-(8, '2023-08-24', 'Broken door lock', 'Pending', NULL, 8),  
-(9, '2023-09-26', 'Roof leakage', 'In Progress', NULL, 9),  
-(10, '2023-10-28', 'Water heater replacement', 'Completed', '2023-11-05', 10),  
-(11, '2023-11-15', 'Leaky shower head', 'Pending', NULL, 11),  
-(12, '2023-12-20', 'Cracked window', 'Completed', '2023-12-25', 12),  
-(13, '2024-01-10', 'Noisy pipes', 'In Progress', NULL, 13),  
-(14, '2024-02-15', 'Water damage in ceiling', 'Pending', NULL, 14),  
-(15, '2024-03-10', 'Heating issues', 'Completed', '2024-03-15', 15),  
-(16, '2024-04-20', 'Clogged toilet', 'In Progress', NULL, 16),  
-(17, '2024-05-18', 'Broken shower handle', 'Pending', NULL, 17),  
-(18, '2024-06-15', 'Malfunctioning dishwasher', 'Completed', '2024-06-20', 18),  
-(19, '2024-07-30', 'Broken door lock', 'Pending', NULL, 19),  
-(20, '2024-08-05', 'Broken window lock', 'In Progress', NULL, 20);
--- -----------------------------------------------------
--- Insert Data into `cs_bag15552`.`Furniture_Inventory`
--- -----------------------------------------------------
-INSERT INTO `cs_bag15552`.`Furniture_Inventory` (`idFurniture_Inventory`, `Furniture_Type`, `Quantity`, `Condition`, `Apartment_idApartment`) VALUES
-(1, 'Bed', 1, 'Good', 1),  
-(2, 'Desk', 1, 'Good', 1),  
-(3, 'Chair', 2, 'Fair', 1),  
-(4, 'Sofa', 1, 'Good', 2),  
-(5, 'Table', 1, 'Fair', 2),  
-(6, 'Bed', 1, 'Good', 3),  
-(7, 'Desk', 1, 'Good', 3),  
-(8, 'Chair', 2, 'Fair', 3),  
-(9, 'Sofa', 1, 'Good', 4),  
-(10, 'Table', 1, 'Fair', 4),  
-(11, 'Bed', 1, 'Good', 5),  
-(12, 'Desk', 1, 'Good', 5),  
-(13, 'Chair', 2, 'Fair', 5),  
-(14, 'Sofa', 1, 'Good', 6),  
-(15, 'Table', 1, 'Fair', 6),  
-(16, 'Bed', 1, 'Good', 7),  
-(17, 'Desk', 1, 'Good', 7),  
-(18, 'Chair', 2, 'Fair', 7),  
-(19, 'Sofa', 1, 'Good', 8),  
-(20, 'Table', 1, 'Fair', 8);
--- -----------------------------------------------------
--- Insert Data into `cs_bag15552`.`Parking_Permits`
--- -----------------------------------------------------
-INSERT INTO `cs_bag15552`.`Parking_Permits` (`idParking_Permits`, `License_Plate_Number`, `Apartment_idApartment`) VALUES
-(1, 'ABC-1234', 1),  
-(2, 'XYZ-5678', 2),  
-(3, 'LMN-9101', 3),  
-(4, 'DEF-2345', 4),  
-(5, 'GHI-3456', 5),  
-(6, 'JKL-4567', 6),  
-(7, 'MNO-5678', 7),  
-(8, 'PQR-6789', 8),  
-(9, 'STU-7890', 9),  
-(10, 'VWX-8901', 10),  
-(11, 'AAA-1111', 11),  
-(12, 'BBB-2222', 12),  
-(13, 'CCC-3333', 13),  
-(14, 'DDD-4444', 14),  
-(15, 'EEE-5555', 15),  
-(16, 'FFF-6666', 16),  
-(17, 'GGG-7777', 17),  
-(18, 'HHH-8888', 18),  
-(19, 'III-9999', 19),  
-(20, 'JJJ-1010', 20);
+-- Insert Data into `Maintenance_Requests`
+INSERT INTO `cs_bag15552`.`Maintenance_Requests` (`idMaintenance_Requests`, `Request_Date`, `Description`, `Status`, `Completion_Date`) VALUES
+(1, '2023-01-10', 'Leaky faucet in kitchen', 'Completed', '2023-01-15'),
+(2, '2023-02-12', 'Broken window in bedroom', 'In Progress', NULL),
+(3, '2023-03-14', 'Heating system malfunction', 'Completed', '2023-03-20'),
+(4, '2023-04-16', 'Electrical issues in living room', 'Pending', NULL),
+(5, '2023-05-18', 'Clogged bathroom drain', 'Completed', '2023-05-22'),
+(6, '2023-06-20', 'Pest control needed in kitchen', 'In Progress', NULL),
+(7, '2023-07-22', 'Air conditioner not working', 'Completed', '2023-07-30'),
+(8, '2023-08-24', 'Broken door lock', 'Pending', NULL),
+(9, '2023-09-26', 'Roof leakage', 'In Progress', NULL),
+(10, '2023-10-28', 'Water heater replacement', 'Completed', '2023-11-05'),
+(11, '2023-01-15', 'Leaky toilet', 'Completed', '2023-01-20'),
+(12, '2023-02-18', 'Broken dishwasher', 'In Progress', NULL),
+(13, '2023-03-20', 'Cracked wall in hallway', 'Completed', '2023-03-27'),
+(14, '2023-04-22', 'No hot water in bathroom', 'Pending', NULL),
+(15, '2023-05-25', 'Blown fuse', 'Completed', '2023-05-28'),
+(16, '2023-06-27', 'Termite infestation', 'In Progress', NULL),
+(17, '2023-07-29', 'Broken stove', 'Completed', '2023-08-02'),
+(18, '2023-08-31', 'Roof tiles missing', 'Pending', NULL),
+(19, '2023-09-30', 'Leaking fridge', 'In Progress', NULL),
+(20, '2023-10-29', 'Broken shower head', 'Completed', '2023-11-06');
 
--- -----------------------------------------------------
--- Insert Data into `cs_bag15552`.`Utilities`
--- -----------------------------------------------------
+-- Insert Data into `Utilities`
 INSERT INTO `cs_bag15552`.`Utilities` (`idUtilities`, `Cost_Per_Month`, `Apartment_idApartment`) VALUES
-(1, 150, 1),  
-(2, 200, 2),  
-(3, 175, 3),  
-(4, 160, 4),  
-(5, 180, 5),  
-(6, 150, 6),  
-(7, 200, 7),  
-(8, 175, 8),  
-(9, 160, 9),  
-(10, 180, 10),  
-(11, 190, 11),  
-(12, 160, 12),  
-(13, 210, 13),  
-(14, 220, 14),  
-(15, 230, 15),  
-(16, 200, 16),  
-(17, 210, 17),  
-(18, 220, 18),  
-(19, 240, 19),  
-(20, 250, 20);
+(1, 150, 1),
+(2, 200, 2),
+(3, 175, 3),
+(4, 160, 4),
+(5, 180, 5),
+(6, 150, 6),
+(7, 200, 7),
+(8, 175, 8),
+(9, 160, 9),
+(10, 180, 10),
+(11, 190, 11),
+(12, 160, 12),
+(13, 180, 13),
+(14, 210, 14),
+(15, 170, 15),
+(16, 200, 16),
+(17, 220, 17),
+(18, 160, 18),
+(19, 180, 19),
+(20, 200, 20);
 
--- -----------------------------------------------------
--- Insert Data into `cs_bag15552`.`Roommates`
--- -----------------------------------------------------
-INSERT INTO `cs_bag15552`.`Roommates` (`idRoommates`, `Shared_Lease`, `Apartment_idApartment`) VALUES
-(1, 'Yes', 1),  
-(2, 'No', 1),  
-(3, 'Yes', 2),  
-(4, 'No', 2),  
-(5, 'Yes', 3),  
-(6, 'No', 3),  
-(7, 'Yes', 4),  
-(8, 'No', 4),  
-(9, 'Yes', 5),  
-(10, 'No', 5),  
-(11, 'Yes', 6),  
-(12, 'No', 6),  
-(13, 'Yes', 7),  
-(14, 'No', 7),  
-(15, 'Yes', 8),  
-(16, 'No', 8),  
-(17, 'Yes', 9),  
-(18, 'No', 9),  
-(19, 'Yes', 10),  
-(20, 'No', 10);
+-- Insert Data into `Furniture_Inventory`
+INSERT INTO `cs_bag15552`.`Furniture_Inventory` (`idFurniture_Inventory`, `Furniture_Type`, `Quantity`, `Condition`, `Apartment_idApartment`) VALUES
+(1, 'Bed', 1, 'Good', 1),
+(2, 'Desk', 1, 'Good', 1),
+(3, 'Chair', 2, 'Fair', 1),
+(4, 'Sofa', 1, 'Good', 2),
+(5, 'Table', 1, 'Fair', 2),
+(6, 'Bed', 1, 'Good', 3),
+(7, 'Desk', 1, 'Good', 3),
+(8, 'Chair', 2, 'Fair', 3),
+(9, 'Sofa', 1, 'Good', 4),
+(10, 'Table', 1, 'Fair', 4),
+(11, 'Chair', 4, 'Good', 5),
+(12, 'Bed', 1, 'Good', 6),
+(13, 'Desk', 1, 'Fair', 6),
+(14, 'Table', 1, 'Good', 7),
+(15, 'Chair', 2, 'Good', 7),
+(16, 'Sofa', 1, 'Fair', 8),
+(17, 'Desk', 1, 'Good', 9),
+(18, 'Bed', 1, 'Good', 10),
+(19, 'Sofa', 1, 'Fair', 11),
+(20, 'Table', 1, 'Good', 12);
 
--- -----------------------------------------------------
--- Insert Data into `cs_bag15552`.`Maintenance_Staff`
--- -----------------------------------------------------
+-- Insert Data into `Parking_Permits`
+INSERT INTO `cs_bag15552`.`Parking_Permits` (`idParking_Permits`, `License_Plate_Number`, `Apartment_idApartment`) VALUES
+(1, 'ABC-1234', 1),
+(2, 'XYZ-5678', 2),
+(3, 'LMN-9101', 3),
+(4, 'DEF-2345', 4),
+(5, 'GHI-3456', 5),
+(6, 'JKL-4567', 6),
+(7, 'MNO-5678', 7),
+(8, 'PQR-6789', 8),
+(9, 'STU-7890', 9),
+(10, 'VWX-8901', 10),
+(11, 'ABC-1111', 11),
+(12, 'XYZ-2222', 12),
+(13, 'LMN-3333', 13),
+(14, 'DEF-4444', 14),
+(15, 'GHI-5555', 15),
+(16, 'JKL-6666', 16),
+(17, 'MNO-7777', 17),
+(18, 'PQR-8888', 18),
+(19, 'STU-9999', 19),
+(20, 'VWX-0000', 20);
+
+-- Insert Data into `Maintenance_Staff`
 INSERT INTO `cs_bag15552`.`Maintenance_Staff` (`idMaintenance_Staff`, `Name`, `Role`, `Buildings_idBuildings`) VALUES
-(1, 'John Doe', 'Plumber', 1),  
-(2, 'Jane Smith', 'Electrician', 1),  
-(3, 'Mike Brown', 'Handyman', 2),  
-(4, 'Emily Davis', 'Supervisor', 2),  
-(5, 'Chris Johnson', 'Technician', 3),  
-(6, 'Pat Wilson', 'Manager', 3),  
-(7, 'Taylor Garcia', 'Electrician', 1),  
-(8, 'Morgan Martinez', 'Janitor', 1),  
-(9, 'Jordan Hernandez', 'Worker', 2),  
-(10, 'Riley Lopez', 'Technician', 2),  
-(11, 'Sam Thompson', 'Manager', 3),  
-(12, 'Alex Moore', 'Plumber', 3),  
-(13, 'Jamie Lee', 'Technician', 1),  
-(14, 'Dana White', 'Electrician', 1),  
-(15, 'Taylor King', 'Supervisor', 2),  
-(16, 'Jordan Young', 'Handyman', 2),  
-(17, 'Skylar Wright', 'Manager', 3),  
-(18, 'Charlie Hall', 'Janitor', 3),  
-(19, 'Drew Adams', 'Technician', 1),  
-(20, 'Casey Clark', 'Electrician', 1);
+(1, 'John Doe', 'Plumber', 1),
+(2, 'Jane Smith', 'Electrician', 1),
+(3, 'Mike Brown', 'Handyman', 2),
+(4, 'Emily Davis', 'Supervisor', 2),
+(5, 'Chris Johnson', 'Technician', 3),
+(6, 'Pat Wilson', 'Manager', 3),
+(7, 'Taylor Garcia', 'Electrician', 1),
+(8, 'Morgan Martinez', 'Janitor', 1),
+(9, 'Jordan Hernandez', 'Worker', 2),
+(10, 'Riley Lopez', 'Technician', 2),
+(11, 'Alex Wright', 'Cleaner', 3),
+(12, 'Sam Miller', 'Carpenter', 3),
+(13, 'Jamie Green', 'Painter', 1),
+(14, 'Taylor Hughes', 'Technician', 1),
+(15, 'Casey White', 'Supervisor', 2),
+(16, 'Drew Harris', 'Worker', 2),
+(17, 'Jesse Clark', 'Electrician', 3),
+(18, 'Dana Moore', 'Handyman', 3),
+(19, 'Charlie Rivera', 'Plumber', 1),
+(20, 'Casey Patterson', 'Manager', 1);
 
--- -----------------------------------------------------
--- Insert Data into `cs_bag15552`.`Contracts`
--- -----------------------------------------------------
-INSERT INTO `cs_bag15552`.`Contracts` (`idContracts`, `Signed_Date`, `Expiration_Date`, `Apartment_idApartment`) VALUES
-(1, '2023-01-01', '2024-01-01', 1),  
-(2, '2023-02-01', '2024-02-01', 2),  
-(3, '2023-03-01', '2024-03-01', 3),  
-(4, '2023-04-01', '2024-04-01', 4),  
-(5, '2023-05-01', '2024-05-01', 5),  
-(6, '2023-06-01', '2024-06-01', 6),  
-(7, '2023-07-01', '2024-07-01', 7),  
-(8, '2023-08-01', '2024-08-01', 8),  
-(9, '2023-09-01', '2024-09-01', 9),  
-(10, '2023-10-01', '2024-10-01', 10),  
-(11, '2023-11-01', '2024-11-01', 11),  
-(12, '2023-12-01', '2024-12-01', 12),  
-(13, '2024-01-01', '2025-01-01', 13),  
-(14, '2024-02-01', '2025-02-01', 14),  
-(15, '2024-03-01', '2025-03-01', 15),  
-(16, '2024-04-01', '2025-04-01', 16),  
-(17, '2024-05-01', '2025-05-01', 17),  
-(18, '2024-06-01', '2025-06-01', 18),  
-(19, '2024-07-01', '2025-07-01', 19),  
-(20, '2024-08-01', '2025-08-01', 20);
--- -----------------------------------------------------
--- Insert Data into `cs_bag15552`.`Apartment_has_Maintenance_Requests`
--- -----------------------------------------------------
-INSERT INTO `cs_bag15552`.`Apartment_has_Maintenance_Requests` (`Apartment_idApartment`, `Maintenance_Requests_idMaintenance_Requests`) VALUES
-(1, 1),  
-(1, 2),  
-(2, 3),  
-(2, 4),  
-(3, 5),  
-(3, 6),  
-(4, 7),  
-(4, 8),  
-(5, 9),  
-(5, 10),  
-(6, 11),  
-(6, 12),  
-(7, 13),  
-(7, 14),  
-(8, 15),  
-(8, 16),  
-(9, 17),  
-(9, 18),  
-(10, 19),  
-(10, 20);
+-- Insert Data into `Student_has_Maintenance_Requests`
+INSERT INTO `cs_bag15552`.`Student_has_Maintenance_Requests` (`Student_idStudent`, `Maintenance_Requests_idMaintenance_Requests`) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10),
+(11, 11),
+(12, 12),
+(13, 13),
+(14, 14),
+(15, 15),
+(16, 16),
+(17, 17),
+(18, 18),
+(19, 19),
+(20, 20);
+
 # Query to Find Pending Maintenance Requests
 SELECT *  
 FROM Maintenance_Requests  
@@ -593,7 +495,6 @@ from Furniture_Inventory
 join Apartment on Apartment.idApartment = Furniture_Inventory.Apartment_idApartment
 order by idApartment, Furniture_Type;
 
-# Query to see the average cost of utilities per apartment over $100
 SELECT Apartment.Room_Number, Apartment.Number_Of_Bedrooms, AVG(Cost_Per_Month) AS 'avg Utilities'
 FROM Apartment
 JOIN Utilities ON Apartment.idApartment = Utilities.idApartment
@@ -618,32 +519,4 @@ FROM
     JOIN Leases AS Leases ON Student.Leases_idLeases = Leases.idLeases  
     JOIN Rent_Payments AS Rent_Payments ON Leases.idLeases = Rent_Payments.Leases_idLeases  
 WHERE   
-    Rent_Payments.Status = 'Paid'; 
-
-# Query that answers: "Which students have made rent payments?"
-select 
-    Student.First_Name,
-    Student.Last_Name,
-    Student.Email,
-    Rent_Payments.Payment_Date,
-    Rent_Payments.Amount_Paid,
-    Rent_Payments.Status as Payment_Status,
-    Leases.Rent_Amount as Rent_Amount
-from 
-    Student
-	join Leases on Student.Leases_idLeases = Leases.idLeases
-  join Rent_Payments on Leases.idLeases = Rent_Payments.Leases_idLeases
-where 
-    Rent_Payments.Status = 'Paid';
-
-
-select Building.BuildingName,
-avg(Apartment.Rent) as 'Average_Rent',
-sum(Utilities.Cost_Per_Month) as 'Total_Utilities_Cost',
-count(Students.idStudent) as 'Number_of_Students'
-from Buildings
-Join Apartment on Buildings.idBuildings = Apartment.idBuildings
-Join Leases on Apartment.Leases_idLeases = Leases.idLeases
-Join Student on Leases.idLeases = Student.idLeases
-Join Utilities on Apartment.idApartment = Utilities.idApartment
-group by Building.Building_Name;
+    Rent_Payments.Status = 'Paid';  
