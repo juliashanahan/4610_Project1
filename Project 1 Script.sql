@@ -498,7 +498,7 @@ order by idApartment, Furniture_Type;
 -- TP_Q7
 SELECT Apartment.Room_Number, Apartment.Number_Of_Bedrooms, AVG(Cost_Per_Month) AS 'avg Utilities'
 FROM Apartment
-JOIN Utilities ON Apartment.idApartment = Utilities.idApartment
+JOIN Utilities ON Apartment.idApartment = Utilities.Apartment_idApartment
 GROUP BY Apartment.Room_Number, Apartment.Number_Of_Bedrooms
 HAVING AVG(Cost_Per_Month)>100;
 
