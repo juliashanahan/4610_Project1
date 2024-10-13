@@ -56,6 +56,7 @@ Query 1 lists all of the pending maintenance requests.
 Query 1 is beneficial for management because awareness of the pending maintenace requests allows them to monitor the workload of their maintenance staff, as well as confirm that requests are taken care of in a timely manner. By gaining a better understanding of their staff's workload, management can ensure they are not being underutilized or overutilized, leading to more efficient scheduling. More efficieny scheduling will also assist in confirming that requests are taken care of promptly, which is crucial for resident satisfaction. Furthermore, management can use this information to identify trends and recurring issues, allowing for better strategic planning for infrastructure and appliance updates.
 
 
+
 Query 2 lists the student name, building name, and apartment number of all residents with an overdue rent payment.
 
 <img width="618" alt="Screenshot 2024-10-13 at 3 30 33 PM" src="https://github.com/user-attachments/assets/19e20287-5aa6-4c89-83c9-60edff62fd2a">
@@ -64,17 +65,23 @@ Query 2 lists the student name, building name, and apartment number of all resid
 Query 2 is beneficial for management because it can help maintain a positive relationship with the resident. By prioritizing communication with the residents who have overdue payments, management can address the issue quickly and get it resolved before it becomes a larger problem. This query also allows management to enforce any policies in the lease for overdue payments, such as late fees.
 
 
+
 Query 3 lists the names and total rent cost for a year long lease for each resident.
 
 <img width="508" alt="Screenshot 2024-10-13 at 3 54 47 PM" src="https://github.com/user-attachments/assets/6e696e69-3d9f-4d9c-9875-d68cc6eaf8e0">
 <img width="217" alt="Screenshot 2024-10-13 at 3 56 07 PM" src="https://github.com/user-attachments/assets/ab8dbaa7-a881-41eb-97b1-f5e19e58d4ca">
 
-Query 3 is beneficial for management because 
+Query 3 is beneficial for management because by knowing the total rent of each resident, it allows them to predict their annual revenue. By knowing the amount of revenue they can expect, management can use this information to evaluate their current pricing, and assess if the rent should be increased or decreased in the future.
+
+
 
 Query 4 lists the room number, number of bedrooms, number of bathrooms, monthly rent, and the name of the building for all apartments still available for rent.
 
 <img width="525" alt="Screenshot 2024-10-13 at 3 56 25 PM" src="https://github.com/user-attachments/assets/f2c75437-d51f-4797-ba82-0435fef1656a">
 <img width="221" alt="Screenshot 2024-10-13 at 3 56 46 PM" src="https://github.com/user-attachments/assets/548dd11d-f8ab-4bda-9632-9c1e3bb22206">
+
+Query 4 is beneficial to management because it will allow them to see which apartments and the details of the apartments that are available to any interested tenants. This information could affect their marketing efforts. For example, they may focus on promoting larger apartments with more bedrooms/bathrooms if these layouts are the ones that remain available. Additionally, they may be able to identify a trend in the unrented rooms. If there is a specific building that has significantly more vacancies, this may indicate a larger issue with things such as the location, the amenities, etc.
+
 
 
 Query 5 lists the furniture inventory for each apartment by showing the apartment ID, the type of furniture, the quantity of each type, and the condition of the furniture. The results are ordered by the apartment ID and the type of furniture.
