@@ -520,15 +520,16 @@ WHERE
     Rent_Payments.Status = 'Paid';  
 
 -- TP_Q9
-SELECT a.Room_Number, a.Number_Of_Bedrooms, a.Number_Of_Bathrooms, a.Rent, b.Building_Name
-FROM Apartment a
-JOIN Buildings b ON a.Buildings_idBuildings = b.idBuildings
-WHERE a.Number_Of_Bedrooms > 2;
+SELECT Apartment.Room_Number, Apartment.Number_Of_Bedrooms, Apartment.Number_Of_Bathrooms, Apartment.Rent, 
+Buildings.Building_Name
+FROM Apartment
+JOIN Buildings ON Apartment.Buildings_idBuildings = Buildings.idBuildings
+WHERE Apartment.Number_Of_Bedrooms > 2;
 
 -- TP_Q10
-SELECT a.Room_Number, a.Number_Of_Bedrooms, a.Rent, b.Building_Name
-FROM Apartment a
-JOIN Buildings b ON a.Buildings_idBuildings = b.idBuildings
-ORDER BY a.Rent ASC
+SELECT Apartment.Room_Number, Apartment.Number_Of_Bedrooms, Apartment.Rent, Buildings.Building_Name
+FROM Apartment
+JOIN Buildings ON Apartment.Buildings_idBuildings = Buildings.idBuildings
+ORDER BY Apartment.Rent ASC
 LIMIT 5;
 
