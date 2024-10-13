@@ -50,15 +50,63 @@ The building entity contains information about the name and address of the build
 ![7C56D558-E389-4618-9BEA-A5B035FB0629](https://github.com/user-attachments/assets/4cfe44cb-0cf0-4150-8ca6-80e7972d350f)
 
 
-## Queries: 
-1. Query 1 lists all of the pending maintenance requests.
+## Queries:
+Query 1 lists all of the pending maintenance requests.
 
-2. Query 2 lists the student name, building name, and apartment number of all residents with an overdue rent payment.
+<img width="212" alt="Screenshot 2024-10-13 at 3 29 07 PM" src="https://github.com/user-attachments/assets/879f2b80-eae0-4f15-b88a-905fc3869320"
+<img width="527" alt="Screenshot 2024-10-13 at 3 29 41 PM" src="https://github.com/user-attachments/assets/09e20f87-0155-4be2-8b8b-3ee9b0a441b1">
 
-3. Query 3 lists the names and total rent cost for a year long lease for each resident.
 
-4. Query 4 lists the room number, number of bedrooms, number of bathrooms, monthly rent, and the name of the building for all apartments still available for rent.
+Query 2 lists the student name, building name, and apartment number of all residents with an overdue rent payment.
 
-5. Query 5 lists the furniture inventory for each apartment by showing the apartment ID, the type of furniture, the quantity of each type, and the condition of the furniture. The results are ordered by the apartment ID and the type of furniture.
+<img width="618" alt="Screenshot 2024-10-13 at 3 30 33 PM" src="https://github.com/user-attachments/assets/19e20287-5aa6-4c89-83c9-60edff62fd2a">
+<img width="960" alt="Screenshot 2024-10-13 at 3 30 47 PM" src="https://github.com/user-attachments/assets/76a24708-63c3-4be6-8167-b024186011aa">
+
+
+Query 3 lists the names and total rent cost for a year long lease for each resident.
+
+<img width="508" alt="Screenshot 2024-10-13 at 3 54 47 PM" src="https://github.com/user-attachments/assets/6e696e69-3d9f-4d9c-9875-d68cc6eaf8e0">
+<img width="217" alt="Screenshot 2024-10-13 at 3 56 07 PM" src="https://github.com/user-attachments/assets/ab8dbaa7-a881-41eb-97b1-f5e19e58d4ca">
+
+
+Query 4 lists the room number, number of bedrooms, number of bathrooms, monthly rent, and the name of the building for all apartments still available for rent.
+
+<img width="525" alt="Screenshot 2024-10-13 at 3 56 25 PM" src="https://github.com/user-attachments/assets/f2c75437-d51f-4797-ba82-0435fef1656a">
+<img width="221" alt="Screenshot 2024-10-13 at 3 56 46 PM" src="https://github.com/user-attachments/assets/548dd11d-f8ab-4bda-9632-9c1e3bb22206">
+
+
+Query 5 lists the furniture inventory for each apartment by showing the apartment ID, the type of furniture, the quantity of each type, and the condition of the furniture. The results are ordered by the apartment ID and the type of furniture.
+
+<img width="771" alt="Screenshot 2024-10-13 at 3 57 04 PM" src="https://github.com/user-attachments/assets/39c63930-fdd4-49c2-9753-681ac63ab5f7">
+<img width="507" alt="Screenshot 2024-10-13 at 3 57 21 PM" src="https://github.com/user-attachments/assets/a1c8b021-1c6e-449a-a7c4-ea4ef572ed5c">
+
+Query 6
+
+<img width="707" alt="Screenshot 2024-10-13 at 3 58 13 PM" src="https://github.com/user-attachments/assets/5be24e56-0bc3-448c-a8f2-24987c183958">
+<img width="378" alt="Screenshot 2024-10-13 at 3 58 32 PM" src="https://github.com/user-attachments/assets/7f593c06-dc81-4763-b71e-ea3571f84321">
+
+
+Query 7
+
+Needs to be fixed has errors
+
+
+Query 8
+
+<img width="724" alt="Screenshot 2024-10-13 at 3 59 15 PM" src="https://github.com/user-attachments/assets/6a34d2b5-0f9a-4615-9637-e37a6d2469e8">
+<img width="643" alt="Screenshot 2024-10-13 at 3 59 31 PM" src="https://github.com/user-attachments/assets/2c70a039-bbe1-411d-ba8f-93daa0dcf88c">
+
+
+Query 9
+
+<img width="869" alt="Screenshot 2024-10-13 at 3 59 48 PM" src="https://github.com/user-attachments/assets/624b5e51-d06d-4078-a0de-1b1e69db06cb">
+<img width="504" alt="Screenshot 2024-10-13 at 4 00 03 PM" src="https://github.com/user-attachments/assets/c3114f1d-2a7b-457d-a88f-fe6d8fa803fa">
+
+
+Query 10
+
+<img width="798" alt="Screenshot 2024-10-13 at 4 00 13 PM" src="https://github.com/user-attachments/assets/69180095-5b3f-4cb3-a873-6e59c0c72412">
+<img width="376" alt="Screenshot 2024-10-13 at 4 00 24 PM" src="https://github.com/user-attachments/assets/cec86e60-cb93-45b7-bff0-2b6f9ea9925b">
+
 
 ## Database Information:
