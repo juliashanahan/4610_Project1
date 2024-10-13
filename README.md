@@ -77,8 +77,8 @@ Query 3 is beneficial for management because by knowing the total rent of each r
 
 Query 4 lists the room number, number of bedrooms, number of bathrooms, monthly rent, and the name of the building for all apartments still available for rent.
 
-<img width="525" alt="Screenshot 2024-10-13 at 3 56 25 PM" src="https://github.com/user-attachments/assets/f2c75437-d51f-4797-ba82-0435fef1656a">
-<img width="221" alt="Screenshot 2024-10-13 at 3 56 46 PM" src="https://github.com/user-attachments/assets/548dd11d-f8ab-4bda-9632-9c1e3bb22206">
+<img width="771" alt="Screenshot 2024-10-13 at 3 57 04 PM" src="https://github.com/user-attachments/assets/39c63930-fdd4-49c2-9753-681ac63ab5f7">
+<img width="507" alt="Screenshot 2024-10-13 at 3 57 21 PM" src="https://github.com/user-attachments/assets/a1c8b021-1c6e-449a-a7c4-ea4ef572ed5c">
 
 Query 4 is beneficial to management because it will allow them to see which apartments and the details of the apartments that are available to any interested tenants. This information could affect their marketing efforts. For example, they may focus on promoting larger apartments with more bedrooms/bathrooms if these layouts are the ones that remain available. Additionally, they may be able to identify a trend in the unrented rooms. If there is a specific building that has significantly more vacancies, this may indicate a larger issue with things such as the location, the amenities, etc.
 
