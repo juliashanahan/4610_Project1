@@ -523,3 +523,9 @@ FROM
     JOIN Rent_Payments AS Rent_Payments ON Leases.idLeases = Rent_Payments.Leases_idLeases  
 WHERE   
     Rent_Payments.Status = 'Paid';  
+
+--TP_Q10
+SELECT a.Room_Number, a.Number_Of_Bedrooms, a.Number_Of_Bathrooms, a.Rent, b.Building_Name
+FROM Apartment a
+JOIN Buildings b ON a.Buildings_idBuildings = b.idBuildings
+WHERE a.Number_Of_Bedrooms > 2;
