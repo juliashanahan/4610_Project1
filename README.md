@@ -84,10 +84,12 @@ Query 4 is beneficial to management because it will allow them to see which apar
 
 --
 
-Query 5
+Query 5 lists all the active leases for an apartment based on students first name, last name, and start date. 
 
 <img width="524" alt="Screenshot 2024-10-13 at 7 28 44 PM" src="https://github.com/user-attachments/assets/b36758a3-26f3-457c-a08f-198546081786">
 <img width="215" alt="Screenshot 2024-10-13 at 7 27 42 PM" src="https://github.com/user-attachments/assets/f0c6a504-1720-441c-a9b2-9bca4e35a7c5">
+
+Query 5 is beneficial to management to know which leases are active to make sure they can financially plan for their budgets based on how much rent money they expect to recieve from the students that are actively paying their leases. For risk management purposes, this can help management understand how much renters insurance they need for the complex. 
 
 --
 
@@ -96,11 +98,15 @@ Query 6 lists the furniture inventory for each apartment by showing the apartmen
 <img width="707" alt="Screenshot 2024-10-13 at 3 58 13 PM" src="https://github.com/user-attachments/assets/5be24e56-0bc3-448c-a8f2-24987c183958">
 <img width="378" alt="Screenshot 2024-10-13 at 3 58 32 PM" src="https://github.com/user-attachments/assets/7f593c06-dc81-4763-b71e-ea3571f84321">
 
+Query 6 is beneficial to management to know what furniture is in each apartment and to know the condition of the pieces. It is important for management to understand which pieces of furniture they might need to update or buy replacements of. 
+
 --
 
-Query 7
+Query 7 lists the average cost of utilities per apartment that are over $100 per month based on apartment room number and number of bedrooms.
 
 Needs to be fixed has errors
+
+Query 7 is benefical to management as they can use this to monitor the average cost of utilities per apartment and if there is an apartment where their average utilities is way higher than other apartments, that could be a sign of a leak or damage of electrical wires. 
 
 --
 
