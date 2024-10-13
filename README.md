@@ -54,11 +54,15 @@ Query 1 lists all of the pending maintenance requests.
 <img width="212" alt="Screenshot 2024-10-13 at 3 29 07 PM" src="https://github.com/user-attachments/assets/879f2b80-eae0-4f15-b88a-905fc3869320">
 <img width="527" alt="Screenshot 2024-10-13 at 3 29 41 PM" src="https://github.com/user-attachments/assets/09e20f87-0155-4be2-8b8b-3ee9b0a441b1">
 
+Query 1 is beneficial for management because awareness of the pending maintenace requests allows them to monitor the workload of their maintenance staff, as well as confirm that requests are taken care of in a timely manner. By gaining a better understanding of their staff's workload, management can ensure they are not being underutilized or overutilized, leading to more efficient scheduling. More efficieny scheduling will also assist in confirming that requests are taken care of promptly, which is crucial for resident satisfaction. Furthermore, management can use this information to identify trends and recurring issues, allowing for better strategic planning for infrastructure and appliance updates.
+
 
 Query 2 lists the student name, building name, and apartment number of all residents with an overdue rent payment.
 
 <img width="618" alt="Screenshot 2024-10-13 at 3 30 33 PM" src="https://github.com/user-attachments/assets/19e20287-5aa6-4c89-83c9-60edff62fd2a">
 <img width="960" alt="Screenshot 2024-10-13 at 3 30 47 PM" src="https://github.com/user-attachments/assets/76a24708-63c3-4be6-8167-b024186011aa">
+
+Query 2 is beneficial for management because it can help maintain a positive relationship with the resident. By prioritizing communication with the residents who have overdue payments, management can address the issue quickly and get it resolved before it becomes a larger problem. This query also allows management to enforce any policies in the lease for overdue payments, such as late fees.
 
 
 Query 3 lists the names and total rent cost for a year long lease for each resident.
@@ -66,6 +70,7 @@ Query 3 lists the names and total rent cost for a year long lease for each resid
 <img width="508" alt="Screenshot 2024-10-13 at 3 54 47 PM" src="https://github.com/user-attachments/assets/6e696e69-3d9f-4d9c-9875-d68cc6eaf8e0">
 <img width="217" alt="Screenshot 2024-10-13 at 3 56 07 PM" src="https://github.com/user-attachments/assets/ab8dbaa7-a881-41eb-97b1-f5e19e58d4ca">
 
+Query 3 is beneficial for management because 
 
 Query 4 lists the room number, number of bedrooms, number of bathrooms, monthly rent, and the name of the building for all apartments still available for rent.
 
