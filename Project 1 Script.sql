@@ -524,3 +524,11 @@ SELECT a.Room_Number, a.Number_Of_Bedrooms, a.Number_Of_Bathrooms, a.Rent, b.Bui
 FROM Apartment a
 JOIN Buildings b ON a.Buildings_idBuildings = b.idBuildings
 WHERE a.Number_Of_Bedrooms > 2;
+
+-- TP_Q10
+SELECT a.Room_Number, a.Number_Of_Bedrooms, a.Rent, b.Building_Name
+FROM Apartment a
+JOIN Buildings b ON a.Buildings_idBuildings = b.idBuildings
+ORDER BY a.Rent ASC
+LIMIT 5;
+
