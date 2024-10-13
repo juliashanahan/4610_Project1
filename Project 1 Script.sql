@@ -502,13 +502,8 @@ JOIN Utilities ON Apartment.idApartment = Utilities.idApartment
 GROUP BY Apartment.Room_Number, Apartment.Number_Of_Bedrooms
 HAVING AVG(Cost_Per_Month)>100;
 
---TP_Q8
-select Room_Number, Condition from Apartment join Furniture_Inventory
-on Apartment.idApartment = Furniture_Inventory.idApartment
-group by Apartment.Room_Number
-having Condition = 'Poor';
 
---TP_Q9
+--TP_Q8
 SELECT   
     Student.First_Name,  
     Student.Last_Name,  
