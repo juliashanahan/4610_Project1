@@ -33,19 +33,16 @@ The building entity contains information about the name and address of the build
 
 ## Data Dictionary:
 
-![27EA16B1-4175-49C5-87A2-FEAA71CCCEF4](https://github.com/user-attachments/assets/b28eb736-4a08-412d-81dc-6e7c26f6bd20)
-![63A16ABC-B9FE-4C68-9682-0FCCB2401AC8](https://github.com/user-attachments/assets/30604c93-b503-4aea-a6a4-6e10e84dffb7)
-![47F452A6-54EC-4C56-9256-CAE55F9D2CD5](https://github.com/user-attachments/assets/43d2a1c2-45ca-4411-92ed-7e307b15c1dd)
-![A91200CD-1E28-48AB-98FE-4F22CF7E2B8A](https://github.com/user-attachments/assets/080e083a-653c-4b6e-8ad3-f592126ed835)
-![DEF43C41-06DB-4644-AB44-54ACED4E2FBF](https://github.com/user-attachments/assets/cc27765d-9b6c-467b-8ab8-02dbe0a9e307)
-![356D44E6-8319-4D68-B6BE-9C964FE614D7](https://github.com/user-attachments/assets/8cb1af20-b358-422d-ab5e-2c66daf2a7a4)
-![6878C40D-9F67-41A9-89BF-C60626F2ACAE](https://github.com/user-attachments/assets/912cd70d-9cf1-49c6-a984-79ef5b3a0ee6)
-![94B09E6A-5B7B-44C5-8D21-50B73B30ADBD](https://github.com/user-attachments/assets/2b18ffd6-3f42-4a89-be35-27d768b577ca)
-![86290B71-EBA8-47F3-8FB2-AA8348CB071A](https://github.com/user-attachments/assets/524df752-3be0-43ec-97c5-0967f37f10bd)
-![64AB2DD6-E6A4-4D57-A81B-10ABBFA0F254](https://github.com/user-attachments/assets/84fac451-92f2-4058-87d3-38fbdfa5a59e)
-![FFDE0BFD-D6AF-4D18-BA3F-FD0F0B42C64D](https://github.com/user-attachments/assets/e07e77fc-f9c9-45f0-8a55-7c6e79ad4224)
-![148497EA-1B97-4C8B-8901-8DFDA9B5911B](https://github.com/user-attachments/assets/2b8e0c4a-402f-4ffe-8b78-22d95b1a295f)
-![7C56D558-E389-4618-9BEA-A5B035FB0629](https://github.com/user-attachments/assets/4cfe44cb-0cf0-4150-8ca6-80e7972d350f)
+![8C3EFA97-B9BF-4353-A5EC-B8AD540AB192](https://github.com/user-attachments/assets/8a0660fb-0e5e-4ba1-9cba-75b135c9ca7b)
+![D61ABD14-8164-4FFE-B76E-78A171C99FD6](https://github.com/user-attachments/assets/0e0d164b-e772-4b76-aa2a-200a594a2ff0)
+![BCEE8D66-9EB3-482A-873B-1D7F906EE471](https://github.com/user-attachments/assets/2cc90c65-48c9-49f9-b03a-9e69507fa3a9)
+![FD1545A5-9B30-446F-A43D-9BE2A45D2073](https://github.com/user-attachments/assets/4d15e3b4-ca08-424c-a122-919c4d5daca1)
+![3107130F-F24C-4E28-AF91-591FB99F3804](https://github.com/user-attachments/assets/9c4b3c68-7834-4ec3-a901-96b7c8823182)
+![C85A7164-2A41-4A17-96E1-D8AE92366D2D](https://github.com/user-attachments/assets/2f1831a5-f861-4a7e-9e26-ac964a0c2be3)
+![35F6784E-48D5-49DF-90D3-99287F9442F6](https://github.com/user-attachments/assets/377a8886-97c2-4dda-8360-831d21b5e87f)
+![46F9AC6D-AFE2-435E-81DF-4CDF8F632E27](https://github.com/user-attachments/assets/6349bc59-859f-449b-982c-fd48df7b1169)
+![FEC4D783-1FFB-46F3-9361-726F3309D0C8](https://github.com/user-attachments/assets/0e39b21f-9295-4969-bd40-b729a489f7bf)
+![8D73126B-E1B8-4162-BFA2-A5A9D2396B2B](https://github.com/user-attachments/assets/561a6b59-d010-4f5d-bc18-c278ddbdb355)
 
 
 ## Queries:
