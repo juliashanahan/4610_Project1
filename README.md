@@ -45,11 +45,9 @@ The building entity contains information about the name and address of the build
 ![FEC4D783-1FFB-46F3-9361-726F3309D0C8](https://github.com/user-attachments/assets/0e39b21f-9295-4969-bd40-b729a489f7bf)
 ![8D73126B-E1B8-4162-BFA2-A5A9D2396B2B](https://github.com/user-attachments/assets/561a6b59-d010-4f5d-bc18-c278ddbdb355)
 
-## Database Information:
-<img width="768" alt="Screenshot 2024-10-13 at 7 05 40 PM" src="https://github.com/user-attachments/assets/155cd658-ead6-40c4-aa26-d62e7ca96e81">
-
-
 ## Queries:
+<img width="768" alt="Screenshot 2024-10-13 at 7 05 40 PM" src="https://github.com/user-attachments/assets/f4742c93-756c-4d99-adc5-1994ba881e8f">
+
 Query 1 lists all of the pending maintenance requests.
 
 <img width="212" alt="Screenshot 2024-10-13 at 3 29 07 PM" src="https://github.com/user-attachments/assets/879f2b80-eae0-4f15-b88a-905fc3869320">
