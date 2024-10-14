@@ -108,29 +108,32 @@ Query 7 lists the average cost of utilities per apartment that are over $100 per
 <img width="369" alt="Screenshot 2024-10-13 at 7 57 50 PM" src="https://github.com/user-attachments/assets/89ef2236-fdb4-4fa9-982c-58ff53f1e9a6">
 
 
-Query 7 is benefical to management as they can use this to monitor the average cost of utilities per apartment and if there is an apartment where their average utilities is way higher than other apartments, that could be a sign of a leak or damage of electrical wires. Management could know which apartment to go and make sure that everything is working properly for the student tenets. 
+Query 7 is beneficial to management as they can use this to monitor the average cost of utilities per apartment and if there is an apartment where their average utilities is way higher than other apartments, that could be a sign of a leak or damage of electrical wires. Management could know which apartment to go and make sure that everything is working properly for the student tenets. 
 
 
 --
 
-Query 8
+Query 8 lists the Student's information who are marked as their rent is paid.
 
 <img width="724" alt="Screenshot 2024-10-13 at 3 59 15 PM" src="https://github.com/user-attachments/assets/6a34d2b5-0f9a-4615-9637-e37a6d2469e8">
 <img width="643" alt="Screenshot 2024-10-13 at 3 59 31 PM" src="https://github.com/user-attachments/assets/2c70a039-bbe1-411d-ba8f-93daa0dcf88c">
 
+Query 8 is beneficial because it gives management an easy list of everyone who has paid their rent to make sure everyone is up to date.
 --
 
-Query 9
+Query 9 lists all the apartments with two bedrooms or more.
 
 <img width="869" alt="Screenshot 2024-10-13 at 3 59 48 PM" src="https://github.com/user-attachments/assets/624b5e51-d06d-4078-a0de-1b1e69db06cb">
 <img width="504" alt="Screenshot 2024-10-13 at 4 00 03 PM" src="https://github.com/user-attachments/assets/c3114f1d-2a7b-457d-a88f-fe6d8fa803fa">
 
+Query 9 benefits management as it quickly lists all of the apartments with two bedrooms or more. When they are signing new residents who want a larger apartment, they can pull up the entire list so they can give their potential residents their options.
 --
 
-Query 10
+Query 10 lists the 5 apartments with the lowest rent.
 
 <img width="798" alt="Screenshot 2024-10-13 at 4 00 13 PM" src="https://github.com/user-attachments/assets/69180095-5b3f-4cb3-a873-6e59c0c72412">
 <img width="376" alt="Screenshot 2024-10-13 at 4 00 24 PM" src="https://github.com/user-attachments/assets/cec86e60-cb93-45b7-bff0-2b6f9ea9925b">
 
+Query 10 benefits management because they can give potential residents who may be on a tighter budget their apartment options.
 
 ## Database Information:
