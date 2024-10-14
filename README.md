@@ -80,7 +80,7 @@ Query 4 lists the room number, number of bedrooms, number of bathrooms, monthly 
 <img width="771" alt="Screenshot 2024-10-13 at 3 57 04 PM" src="https://github.com/user-attachments/assets/39c63930-fdd4-49c2-9753-681ac63ab5f7">
 <img width="507" alt="Screenshot 2024-10-13 at 3 57 21 PM" src="https://github.com/user-attachments/assets/a1c8b021-1c6e-449a-a7c4-ea4ef572ed5c">
 
-Query 4 is beneficial to management because it will allow them to see which apartments and the details of the apartments that are available to any interested tenants. This information could affect their marketing efforts. For example, they may focus on promoting larger apartments with more bedrooms/bathrooms if these layouts are the ones that remain available. Additionally, they may be able to identify a trend in the unrented rooms. If there is a specific building that has significantly more vacancies, this may indicate a larger issue with things such as the location, the amenities, etc.
+Query 4 is beneficial to management because it will allow them to showcase which apartments and the details of the apartment that are still available to any interested tenants. This information could affect their marketing efforts so that they are targeted towards the vacant rooms. For example, they may focus on promoting larger apartments with more bedrooms/bathrooms if these layouts are the ones that remain available. Additionally, they may be able to identify a trend in the unrented rooms. If there is a specific building that has significantly more vacancies, this may indicate a larger issue with things such as the location, the amenities, etc.
 
 --
 
@@ -108,7 +108,7 @@ Query 7 lists the average cost of utilities per apartment that are over $100 per
 <img width="369" alt="Screenshot 2024-10-13 at 7 57 50 PM" src="https://github.com/user-attachments/assets/89ef2236-fdb4-4fa9-982c-58ff53f1e9a6">
 
 
-Query 7 is beneficial to management as they can use this to monitor the average cost of utilities per apartment and if there is an apartment where their average utilities is way higher than other apartments, that could be a sign of a leak or damage of electrical wires. Management could know which apartment to go and make sure that everything is working properly for the student tenets. 
+Query 7 is beneficial to management as they can use this to monitor the average cost of utilities per apartment. If there is an apartment where their average utilities is much higher than other apartments, that could be a sign of a leak or damage of electrical wires. Management would know which apartments to monitor and make sure that everything is working properly for their tenants. 
 
 
 --
@@ -118,7 +118,7 @@ Query 8 lists the Student's information who are marked as their rent is paid.
 <img width="724" alt="Screenshot 2024-10-13 at 3 59 15 PM" src="https://github.com/user-attachments/assets/6a34d2b5-0f9a-4615-9637-e37a6d2469e8">
 <img width="643" alt="Screenshot 2024-10-13 at 3 59 31 PM" src="https://github.com/user-attachments/assets/2c70a039-bbe1-411d-ba8f-93daa0dcf88c">
 
-Query 8 is beneficial because it gives management an easy list of everyone who has paid their rent to make sure everyone is up to date.
+Query 8 is beneficial because it allows management to keep track of all residents who are up to date on their monthly payments. Management can use this list of residents to send them a confirmation or receipt of their payment, ensuring the resident is aware that their payment was received. This can help maintain a positive relationship between the tenant and the corporation.
 
 --
 
@@ -127,7 +127,7 @@ Query 9 lists all the apartments with two bedrooms or more.
 <img width="869" alt="Screenshot 2024-10-13 at 3 59 48 PM" src="https://github.com/user-attachments/assets/624b5e51-d06d-4078-a0de-1b1e69db06cb">
 <img width="504" alt="Screenshot 2024-10-13 at 4 00 03 PM" src="https://github.com/user-attachments/assets/c3114f1d-2a7b-457d-a88f-fe6d8fa803fa">
 
-Query 9 benefits management as it quickly lists all of the apartments with two bedrooms or more. When they are signing new residents who want a larger apartment, they can pull up the entire list so they can give their potential residents their options.
+Query 9 will benefit management when communicating with potential residents, as it lists all of the apartments with two bedrooms or more. If this potential resident prefers a larger apartment with multiple bedrooms, management is able to showcase the available options.
 
 --
 
