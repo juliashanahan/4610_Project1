@@ -107,7 +107,6 @@ Query 7 lists the average cost of utilities per apartment that are over $100 per
 <img width="798" alt="Screenshot 2024-10-13 at 7 56 56 PM" src="https://github.com/user-attachments/assets/330a5cfb-d220-4418-a1a1-a1caa1f74a49">
 <img width="369" alt="Screenshot 2024-10-13 at 7 57 50 PM" src="https://github.com/user-attachments/assets/89ef2236-fdb4-4fa9-982c-58ff53f1e9a6">
 
-
 Query 7 is beneficial to management as they can use this to monitor the average cost of utilities per apartment. If there is an apartment where their average utilities is much higher than other apartments, that could be a sign of a leak or damage of electrical wires. Management would know which apartments to monitor and make sure that everything is working properly for their tenants. 
 
 
@@ -127,7 +126,7 @@ Query 9 lists all the apartments with two bedrooms or more.
 <img width="869" alt="Screenshot 2024-10-13 at 3 59 48 PM" src="https://github.com/user-attachments/assets/624b5e51-d06d-4078-a0de-1b1e69db06cb">
 <img width="504" alt="Screenshot 2024-10-13 at 4 00 03 PM" src="https://github.com/user-attachments/assets/c3114f1d-2a7b-457d-a88f-fe6d8fa803fa">
 
-Query 9 will benefit management when communicating with potential residents, as it lists all of the apartments with two bedrooms or more. If this potential resident prefers a larger apartment with multiple bedrooms, management is able to showcase the available options.
+Query 9 will benefit management when communicating with potential residents, as it lists all of the apartments with two bedrooms or more. If this potential resident prefers a larger apartment with multiple bedrooms, management is able to provide the available options and the specific details of each apartment. 
 
 --
 
@@ -136,9 +135,9 @@ Query 10 lists the 5 apartments with the lowest rent.
 <img width="798" alt="Screenshot 2024-10-13 at 4 00 13 PM" src="https://github.com/user-attachments/assets/69180095-5b3f-4cb3-a873-6e59c0c72412">
 <img width="376" alt="Screenshot 2024-10-13 at 4 00 24 PM" src="https://github.com/user-attachments/assets/cec86e60-cb93-45b7-bff0-2b6f9ea9925b">
 
-Query 10 benefits management because they can give potential residents who may be on a tighter budget their apartment options.
+Query 10 benefits management because they are able to showcase their lower-costing apartment options to potential residents who may be seeking a more budget-friendly rent.
 
 ## Database Information:
+Database: cs_bag15552
 
-cs_bag15552
 Additional information: Each query listed above is marked in the database using stored procedures which can be called using the following format: CALL TP_Q1();
