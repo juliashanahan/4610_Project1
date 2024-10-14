@@ -119,6 +119,7 @@ Query 8 lists the Student's information who are marked as their rent is paid.
 <img width="643" alt="Screenshot 2024-10-13 at 3 59 31 PM" src="https://github.com/user-attachments/assets/2c70a039-bbe1-411d-ba8f-93daa0dcf88c">
 
 Query 8 is beneficial because it gives management an easy list of everyone who has paid their rent to make sure everyone is up to date.
+
 --
 
 Query 9 lists all the apartments with two bedrooms or more.
@@ -127,6 +128,7 @@ Query 9 lists all the apartments with two bedrooms or more.
 <img width="504" alt="Screenshot 2024-10-13 at 4 00 03 PM" src="https://github.com/user-attachments/assets/c3114f1d-2a7b-457d-a88f-fe6d8fa803fa">
 
 Query 9 benefits management as it quickly lists all of the apartments with two bedrooms or more. When they are signing new residents who want a larger apartment, they can pull up the entire list so they can give their potential residents their options.
+
 --
 
 Query 10 lists the 5 apartments with the lowest rent.
@@ -137,3 +139,6 @@ Query 10 lists the 5 apartments with the lowest rent.
 Query 10 benefits management because they can give potential residents who may be on a tighter budget their apartment options.
 
 ## Database Information:
+
+cs_bag15552
+Additional information: Each query listed above is marked in the database using stored procedures which can be called using the following format: CALL TP_Q1();
